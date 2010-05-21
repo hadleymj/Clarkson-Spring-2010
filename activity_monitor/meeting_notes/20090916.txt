@@ -1,0 +1,123 @@
+By 5:00pm Thursday!
+Follow the format provided by the sample, but remember the sample is a simplistic example and your description should be longer.
+
+H - High Priority
+M - Medium
+L - Low
+
+Jacor	H	Make connection wiimote - pda 
+Jacor	H	pda to server connection
+Jacor	H	Connection Mode: paired, discoverable.
+Mike	H	Clinician Login to Web Ui.
+Mike	H	Clinican can create profile
+Mike	H	Web UI feature
+Brett	M	user selects task for day button.
+Brett	M	Activities displayed in large easy to read font.
+Brett	M	Close button on tasks screen.
+John	H	The user starts the application and is brought immediatly into their account. with stats page showing.		
+John	H	Automatic periodic connection from pda to server to dump data.
+John	H	Emergency data dump occurs if phone mem limit close to being reached.
+Ryan	H	Unable to connect, attempt reconnect periodicly until connection established.
+Andrew	H	As the user walks, the pda records the data coming from the Wii mote.
+Andrew	H	Pda continus running scripts.
+Andrew	M	real time display of stats steps taken, current speed, pedometer functions.
+Joe	H	Alert on PDA including text and audio.
+Joe	H	Detection of lost connection by PDA.
+Joe	M	Vibrating on Wii mote.
+James	M	Alert when task/activity completed user hits button to close message.
+James	H	Usernames for clinicians and patients (unique)
+Jon	L	Graphing for data and data analysis.
+Jon	L	Server displays data in human readable form.
+Ryan	M	View list of available patients.
+Ryan	M	Can set and change/ modify tasks for a specific user over the web ui.
+Ryan	M	The phone updats the users tasks.
+Jon	M	Researcher Login on web UI.
+Steve	L	Charts about groups of patients. Aggregated. Categorized.
+Steve	L	Patients remain anonymous.
+Steve	L	Chart about completion percentage or other patient tasks completion metric.
+James	L	Patient health improvement chart. 
+Done	M	Battery Status (life remaining)
+
+
+Story 1 : Device Setup
+
+	Make connection wiimote - pda 
+	pda to server connection
+	Connection Mode: paired, discoverable.
+	
+
+Story 2 : Setup Patient Profile
+
+	Clinician Login to Web Ui.
+	Clinican can create profile
+	Web UI feature
+	*Whats in the profile? username, userid, password, name, age, height, weight, med conditions, ...
+	
+
+Story 3 : User Gets Daily Tasks
+	
+	user selects task for day button.
+	Activities displayed in large easy to read font.
+	Close button.
+
+
+Story 4 : Who is Participating
+
+	The user starts the application and is brought immediatly into their account. with stats page showing.	
+
+
+Story 5 : Data Dump
+	
+	Automatic periodic connection from pda to server to dump data.
+	Emergency data dump occurs if phone mem limit close to being reached.
+	Unable to connect, attempt reconnect periodicly until connection established.
+
+
+Story 6 : PDA Monitor Activity.
+	
+	NOT REAL TIME.
+	As the user walks, the pda records the data coming from the Wii mote.
+	
+
+Story 7 : Pda Processes and Displays Data.
+
+	Pda continus running scripts.
+	real time display of stats steps taken, current speed, pedometer functions.
+
+
+Story 8 : Wii-Remote Connection Lost.
+
+	NOTE: remove wii mote vibrating. the wii mote cannot vibrate if it disconnects.
+		
+	Alert on PDA including text and audio.
+	Detection of lost connection by PDA.
+	Vibrating on Wii mote.
+
+Story 9 : Activity Completion
+
+	Alert when task/activity completed user hits button to close message.
+	The phone also constantly displays stats.
+
+Story 10 : Clinician Data View
+
+	Clinician Login
+	Web UI for clinician
+	Usernames for clinicians and patients (unique)
+	Graphing for data and data analysis.
+	Server displays data in human readable form.
+	View list of available patients.
+
+Story 11 : Modify Patient Task/Activity
+	
+	Web UI w/ Clinician Login
+	Can set and change/ modify tasks for a specific user over the web ui.
+	The phone updats the users tasks.
+	See task
+
+Story 12 : Researcher Data View (Priority LOW, very LOW)
+
+	Researcher Login on web UI.
+	Charts about groups of patients. Aggregated. Categorized.
+	Patients remain anonymous.
+	Chart about completion percentage or other patient tasks completion metric.
+	Patient health improvement chart. 

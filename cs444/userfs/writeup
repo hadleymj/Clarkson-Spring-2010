@@ -1,0 +1,16 @@
+
+u_import
+
+We implemented u_import by first finding if the provided filename is already in our virtual FS. If it is, we use the current allocated inode and overwrite it. If it is not in the virtual FS, we find a free inode and allocate blocks for the file. We then read the file block-by-block into the inode. Afterwards we update the superblock and directory and write back to the FS.
+
+u_export 
+
+In our export we simply seek to the appropriate filename location and read out the file block-by-block and write it do a unix file descriptor representing the xported file.	
+
+u_del
+
+For u_del, we search for the filename and free the inode and all the corresponding blocks. Then we update the directory and superblock information
+
+u_fsck
+
+We implement fsck by looping through the data structures in our FS and checking to make sure that the superblock, directory, inodes, and blocks maintain consistency. 

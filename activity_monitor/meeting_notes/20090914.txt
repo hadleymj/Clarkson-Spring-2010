@@ -1,0 +1,60 @@
+
+
+
+Client
+------
+
+Pedometer records steps to phone.
+
+Phone sends data to server/database.
+
+
+Clinicain web interface.
+
+Cumulative data stored on the phone.  
+
+Phone interface simple for the user.
+
+
+
+
+Users rent the phone/wiimote from doctor.
+
+
+===Scenarios
+
+2) Jon
+Clinician setups up user profile Web UI. Including personal information.
+
+1) Jacor
+Pair devices, setups up phone connection to backend database with user id and password.
+
+3) Brett
+Patient: View scheduled activities. Tasks for day option for user. walk so far so fast.
+
+4) John
+Select user for current activity or group of users. The data recording process begins. Participating is logging in.
+
+5) Andy
+Flush phone to database. Automatic weekly. Export all accellerometer data.
+
+6) James 
+The user walks at various speeds. The data is recorded by the phone.
+
+7) Andy
+Realtime step and progress data processing. Counting steps.
+
+9) Mike
+Stop activity and go back to user select.
+
+8) Joe
+If the phone and bluetooth device lose connectivity. Attempt reconnect, inform patient device service may be needed. Reports account for missing data.
+
+10) Steve
+Clinician logs into Web UI using username and password, and views patient data for one patient. This includes charts and patient progress.
+
+11) Ryan
+Clinician can update activity tasks on web UI and phone will automatically update the tasks for the patient.
+
+12) Mike
+Researcher views progress of all patients, but has access to no specifics of patient data (annoymous) requires additional processing on server.

@@ -1,0 +1,86 @@
+Mike Hadley
+Jim Licata
+
+3/26/10
+
+Monitor Guard {
+
+cond gate1OK;
+cond gate2OK;
+
+int waiting_inbound = 0;
+int waiting_outbound = 0;
+bool lockBusy = false;
+int turn = 0;
+
+Enter_CS_Inbound(){
+while (lockBusy || turn != 0){
+	waiting_inbound++;
+	gate2OK.wait();
+	waiting_inbound--;
+}
+lockBusy = true;
+gate2OK.signal();
+
+}
+
+Exit_CS_Inbound(){
+if (waiting_outbound > 0)
+	turn = 1;
+
+lockBusy = false;
+gate1OK.signal();
+gate2OK.signal();
+}
+
+Enter_CS_Outbound(){
+while (lockBusy || turn != 1){
+	waiting_outbound++;
+	gate1OK.wait();
+	waiting_outbound--;
+}
+lockBusy = true;
+gate1OK.signal();
+}
+
+Exit_CS_Outbound(){
+if (waiting_inbound > 0)
+	turn = 0;
+
+lockBusy = false;
+gate1OK.signal();
+gate2OK.signal();
+}
+
+
+
+
+Process Inbound
+
+Guard.Enter_CS_Inbound()
+
+open gate2;
+enter the lock;
+close gate2;
+
+open gate1;
+leave the lock;
+close gate1;
+
+Guard.Exit_CS_Inbound()
+
+Process Outbound
+
+Guard.Enter_CS_Outbound()
+
+open gate1;
+enter the lock;
+close gate1;
+
+open gate2;
+leave the lock;
+close gate2;
+
+Guard.Exit_CS_Outbound()
+
+

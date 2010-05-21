@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="makeUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user" type="tns:UserObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="role" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="makeUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="makeUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addPatientNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+            <s:element minOccurs="1" maxOccurs="1" name="user" type="tns:UserObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PatientObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="sex" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="dob" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="handedness" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="ssn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addPatientNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addPatientNoteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPatientNotes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPatientNotesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPatientNotesResult" type="tns:ArrayOfNotes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNotes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Notes" type="tns:Notes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Notes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="note" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="time" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="logIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logInResult" type="tns:UserObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logOut">
+        <s:complexType />
+      </s:element>
+      <s:element name="logOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="logOutResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findPatientResult" type="tns:ArrayOfPatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPatientObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PatientObject" type="tns:PatientObject" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addPatientResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletePatientResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updatePatientResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrievePatientData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrievePatientDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retrievePatientDataResult" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScript">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="script" type="tns:ScriptInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ScriptInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="scriptID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="versionID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getScriptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getScriptResult" type="tns:Script" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Script">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="scriptData" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="scriptID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="version" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="batch" type="tns:Batch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Batch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="scripts" type="tns:ArrayOfScriptInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="batchID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="count" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfScriptInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ScriptInfo" type="tns:ScriptInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getBatchResult" type="tns:Batch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScriptList">
+        <s:complexType />
+      </s:element>
+      <s:element name="getScriptListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getScriptListResult" type="tns:ArrayOfScriptInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBatchList">
+        <s:complexType />
+      </s:element>
+      <s:element name="getBatchListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBatchListResult" type="tns:ArrayOfBatch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBatch">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Batch" type="tns:Batch" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="storeTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="test" type="tns:Test" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Test">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="user" type="tns:UserObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="script" type="tns:Script" />
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfData" />
+          <s:element minOccurs="1" maxOccurs="1" name="hand" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="mode" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="avg_X" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="avg_Y" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="rotation" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="isNormal" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="anal" type="tns:ArrayOfAnalysisData" />
+          <s:element minOccurs="1" maxOccurs="1" name="timestamp" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Data" type="tns:Data" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Data">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="x" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="y" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="time" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="pressure" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnalysisData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AnalysisData" type="tns:AnalysisData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AnalysisData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="metric" type="tns:AnalysisMetric" />
+          <s:element minOccurs="1" maxOccurs="1" name="mean" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdDev" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="min" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="max" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AnalysisMetric">
+        <s:restriction base="s:string">
+          <s:enumeration value="Invalid" />
+          <s:enumeration value="X" />
+          <s:enumeration value="Y" />
+          <s:enumeration value="Pressure" />
+          <s:enumeration value="VelocityX" />
+          <s:enumeration value="VelocityY" />
+          <s:enumeration value="MassFlux" />
+          <s:enumeration value="AccelerationX" />
+          <s:enumeration value="AccelerationY" />
+          <s:enumeration value="Theta" />
+          <s:enumeration value="Rho" />
+          <s:enumeration value="VelocityTheta" />
+          <s:enumeration value="VelocityRho" />
+          <s:enumeration value="AccelerationTheta" />
+          <s:enumeration value="AccelerationRho" />
+          <s:enumeration value="VelocityTangent" />
+          <s:enumeration value="AccelerationTangent" />
+          <s:enumeration value="Deviation" />
+          <s:enumeration value="InnerDeviation" />
+          <s:enumeration value="OuterDeviation" />
+          <s:enumeration value="Distance" />
+          <s:enumeration value="Time" />
+          <s:enumeration value="TimeDelta" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="storeTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="storeTestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="makeBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="batch" type="tns:Batch" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="makeBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="makeBatchResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="numTests" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="patient" type="tns:PatientObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTestsResult" type="tns:ArrayOfTest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Test" type="tns:Test" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getTestData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTestDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTestDataResult" type="tns:ArrayOfData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="makeUserSoapIn">
+    <wsdl:part name="parameters" element="tns:makeUser" />
+  </wsdl:message>
+  <wsdl:message name="makeUserSoapOut">
+    <wsdl:part name="parameters" element="tns:makeUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="addPatientNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:addPatientNote" />
+  </wsdl:message>
+  <wsdl:message name="addPatientNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:addPatientNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPatientNotesSoapIn">
+    <wsdl:part name="parameters" element="tns:getPatientNotes" />
+  </wsdl:message>
+  <wsdl:message name="getPatientNotesSoapOut">
+    <wsdl:part name="parameters" element="tns:getPatientNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="logInSoapIn">
+    <wsdl:part name="parameters" element="tns:logIn" />
+  </wsdl:message>
+  <wsdl:message name="logInSoapOut">
+    <wsdl:part name="parameters" element="tns:logInResponse" />
+  </wsdl:message>
+  <wsdl:message name="logOutSoapIn">
+    <wsdl:part name="parameters" element="tns:logOut" />
+  </wsdl:message>
+  <wsdl:message name="logOutSoapOut">
+    <wsdl:part name="parameters" element="tns:logOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="findPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:findPatient" />
+  </wsdl:message>
+  <wsdl:message name="findPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:findPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="addPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:addPatient" />
+  </wsdl:message>
+  <wsdl:message name="addPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:addPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePatientSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePatient" />
+  </wsdl:message>
+  <wsdl:message name="deletePatientSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePatientSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePatient" />
+  </wsdl:message>
+  <wsdl:message name="updatePatientSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrievePatientDataSoapIn">
+    <wsdl:part name="parameters" element="tns:retrievePatientData" />
+  </wsdl:message>
+  <wsdl:message name="retrievePatientDataSoapOut">
+    <wsdl:part name="parameters" element="tns:retrievePatientDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScriptSoapIn">
+    <wsdl:part name="parameters" element="tns:getScript" />
+  </wsdl:message>
+  <wsdl:message name="getScriptSoapOut">
+    <wsdl:part name="parameters" element="tns:getScriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:getBatch" />
+  </wsdl:message>
+  <wsdl:message name="getBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:getBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScriptListSoapIn">
+    <wsdl:part name="parameters" element="tns:getScriptList" />
+  </wsdl:message>
+  <wsdl:message name="getScriptListSoapOut">
+    <wsdl:part name="parameters" element="tns:getScriptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBatchListSoapIn">
+    <wsdl:part name="parameters" element="tns:getBatchList" />
+  </wsdl:message>
+  <wsdl:message name="getBatchListSoapOut">
+    <wsdl:part name="parameters" element="tns:getBatchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="storeTestSoapIn">
+    <wsdl:part name="parameters" element="tns:storeTest" />
+  </wsdl:message>
+  <wsdl:message name="storeTestSoapOut">
+    <wsdl:part name="parameters" element="tns:storeTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="makeBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:makeBatch" />
+  </wsdl:message>
+  <wsdl:message name="makeBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:makeBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestsSoapIn">
+    <wsdl:part name="parameters" element="tns:getTests" />
+  </wsdl:message>
+  <wsdl:message name="getTestsSoapOut">
+    <wsdl:part name="parameters" element="tns:getTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTestDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getTestData" />
+  </wsdl:message>
+  <wsdl:message name="getTestDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getTestDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="makeUser">
+      <wsdl:input message="tns:makeUserSoapIn" />
+      <wsdl:output message="tns:makeUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addPatientNote">
+      <wsdl:input message="tns:addPatientNoteSoapIn" />
+      <wsdl:output message="tns:addPatientNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientNotes">
+      <wsdl:input message="tns:getPatientNotesSoapIn" />
+      <wsdl:output message="tns:getPatientNotesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logIn">
+      <wsdl:input message="tns:logInSoapIn" />
+      <wsdl:output message="tns:logInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logOut">
+      <wsdl:input message="tns:logOutSoapIn" />
+      <wsdl:output message="tns:logOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findPatient">
+      <wsdl:input message="tns:findPatientSoapIn" />
+      <wsdl:output message="tns:findPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addPatient">
+      <wsdl:input message="tns:addPatientSoapIn" />
+      <wsdl:output message="tns:addPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePatient">
+      <wsdl:input message="tns:deletePatientSoapIn" />
+      <wsdl:output message="tns:deletePatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePatient">
+      <wsdl:input message="tns:updatePatientSoapIn" />
+      <wsdl:output message="tns:updatePatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrievePatientData">
+      <wsdl:input message="tns:retrievePatientDataSoapIn" />
+      <wsdl:output message="tns:retrievePatientDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScript">
+      <wsdl:input message="tns:getScriptSoapIn" />
+      <wsdl:output message="tns:getScriptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <wsdl:input message="tns:getBatchSoapIn" />
+      <wsdl:output message="tns:getBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScriptList">
+      <wsdl:input message="tns:getScriptListSoapIn" />
+      <wsdl:output message="tns:getScriptListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBatchList">
+      <wsdl:input message="tns:getBatchListSoapIn" />
+      <wsdl:output message="tns:getBatchListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="storeTest">
+      <wsdl:input message="tns:storeTestSoapIn" />
+      <wsdl:output message="tns:storeTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="makeBatch">
+      <wsdl:input message="tns:makeBatchSoapIn" />
+      <wsdl:output message="tns:makeBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTests">
+      <wsdl:input message="tns:getTestsSoapIn" />
+      <wsdl:output message="tns:getTestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTestData">
+      <wsdl:input message="tns:getTestDataSoapIn" />
+      <wsdl:output message="tns:getTestDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="makeUser">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/makeUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPatientNote">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/addPatientNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientNotes">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getPatientNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIn">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/logIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logOut">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/logOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findPatient">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/findPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPatient">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/addPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePatient">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/deletePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePatient">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/updatePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePatientData">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/retrievePatientData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScript">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getScript" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScriptList">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getScriptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatchList">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getBatchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeTest">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/storeTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeBatch">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/makeBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTests">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getTests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTestData">
+      <soap:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getTestData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="makeUser">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/makeUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPatientNote">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/addPatientNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientNotes">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getPatientNotes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIn">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/logIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logOut">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/logOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findPatient">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/findPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPatient">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/addPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePatient">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/deletePatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePatient">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/updatePatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrievePatientData">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/retrievePatientData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScript">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getScript" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatch">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScriptList">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getScriptList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBatchList">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getBatchList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="storeTest">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/storeTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeBatch">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/makeBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTests">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getTests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTestData">
+      <soap12:operation soapAction="http://softeng-lab.camp.clarkson.edu/movement/server/Service.asmx/getTestData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://crusoe.camp.clarkson.edu/Movement/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://crusoe.camp.clarkson.edu/Movement/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

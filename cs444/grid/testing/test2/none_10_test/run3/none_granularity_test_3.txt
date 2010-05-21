@@ -1,0 +1,19 @@
+Initial Grid:
+
+42	86	6	
+86	46	61	
+49	21	12	
+
+Initial Sum:  409
+Executing threads...
+
+Final Grid:
+
+12	86	61	
+21	6	49	
+46	86	42	
+
+
+Final Sum:  409
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  20

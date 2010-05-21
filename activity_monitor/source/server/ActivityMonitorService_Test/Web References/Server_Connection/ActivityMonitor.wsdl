@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost:2345" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://localhost:2345" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:2345">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="me" type="tns:User" />
+            <s:element minOccurs="0" maxOccurs="1" name="stats" type="tns:Stats" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Stats" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatsClass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="idStatistics" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idDailyTask" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WalkingStats">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Stats">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="steps" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UploadStatsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="me" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTasksResult" type="tns:ArrayOfDailyTask" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDailyTask">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DailyTask" nillable="true" type="tns:DailyTask" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DailyTask" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idDailyTask" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DailyTaskClass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="active" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WalkingTask">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:DailyTask">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="steps" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadStats" />
+  </wsdl:message>
+  <wsdl:message name="UploadStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTasks" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTasksResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ActivityMonitorSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadStats">
+      <wsdl:input message="tns:UploadStatsSoapIn" />
+      <wsdl:output message="tns:UploadStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <wsdl:input message="tns:GetTasksSoapIn" />
+      <wsdl:output message="tns:GetTasksSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActivityMonitorSoap" type="tns:ActivityMonitorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost:2345/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadStats">
+      <soap:operation soapAction="http://localhost:2345/UploadStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <soap:operation soapAction="http://localhost:2345/GetTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActivityMonitorSoap12" type="tns:ActivityMonitorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost:2345/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadStats">
+      <soap12:operation soapAction="http://localhost:2345/UploadStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <soap12:operation soapAction="http://localhost:2345/GetTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActivityMonitor">
+    <wsdl:port name="ActivityMonitorSoap" binding="tns:ActivityMonitorSoap">
+      <soap:address location="http://localhost:2345/ActivityMonitor.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActivityMonitorSoap12" binding="tns:ActivityMonitorSoap12">
+      <soap12:address location="http://localhost:2345/ActivityMonitor.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

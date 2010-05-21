@@ -1,0 +1,30 @@
+Jim, Mike, Ryan, John, Joe, Jon, Jacor, Brett
+
+Progress Update Meeting
+
+
+MOVEMENT Maintenance.
+Not much work done here.
+Jon and Jacor will try and work with Andrew tomorrow.
+
+
+Revise SRS
+Some revisions.
+Forward revisions in latex. \label{battery_status} Next to the section.
+Then use \ref{batter_status} in the text where that section should be referenced.
+
+Change Windows Mobile 6 -> Windows Mobile 5.
+
+
+Software Design (don't mention this to Conry)
+1st 3 sections.
+sections 2 cant be done yet.
+
+
+Spike Solutions
+Software on PDA,
+Wii Remote connects to computer.
+
+Use SVN!
+
+SRS -> 3,4 to Ryan

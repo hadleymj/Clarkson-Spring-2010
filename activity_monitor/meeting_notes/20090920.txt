@@ -1,0 +1,17 @@
+Using latex format for System Requirements Specification.
+
+Change to use proper naming conventions
+Wii Remote
+PDA
+
+Translate into Latex
+
+Number Requirements
+
+Number Testplan
+
+Write testplan for 3 features of yours.
+
+Monday 8:30pm 2nd Floor TAC.
+
+*email the latex doc.

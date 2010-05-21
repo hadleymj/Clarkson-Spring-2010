@@ -1,0 +1,887 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Movement.Database</name>
+    </assembly>
+    <members>
+        <member name="T:Movement.Database.User">
+            <summary>
+            A user that can log into the system and administer tests.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.DBObject">
+            <summary>
+            Manages interaction with the underlying database.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.DBObject.GetConnection">
+            <summary>
+            Gets a new connection from the connection pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Movement.Database.DBObject.GetAsyncConnection">
+            <summary>
+            Gets a new connection from the connection pool that supports asynchronous command execution.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Movement.Database.DBObject.CreateCommand(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String,System.Object[])">
+            <summary>
+            Creates a new SQL command.
+            </summary>
+            <param name="conn">The connection that the command will be executed on.</param>
+            <param name="trans">The transaction that the command will be executed against, or null for an implicit transaction.</param>
+            <param name="command">The name of the stored procedure.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <returns>The created SQL command.</returns>
+        </member>
+        <member name="M:Movement.Database.DBObject.PrepareCommand(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String)">
+            <summary>
+            Creates and prepares a new SQL command.
+            </summary>
+            <param name="conn">The connection that the command will be executed on.</param>
+            <param name="trans">The transaction that the command will be executed against, or null for an implicit transaction.</param>
+            <param name="command">The name of the stored procedure.</param>
+            <returns>The prepared SQL command.</returns>
+        </member>
+        <member name="M:Movement.Database.DBObject.SafeRead``1(System.Data.IDataReader,System.String,``0)">
+            <summary>
+            Reads a field value from a reader and checks if it is null.  If the field is null, the default
+            argument is returned as the value.  Otherwise, the field value is returned.
+            </summary>
+            <typeparam name="T">The type of data read.</typeparam>
+            <param name="reader">The reader to read data from.</param>
+            <param name="field">The name of the column to read from.</param>
+            <param name="def">The default that will be returned if the column is null.</param>
+            <returns>The field value if not null, otherwise the default.</returns>
+        </member>
+        <member name="M:Movement.Database.DBObject.SafeRead(System.Data.IDataReader,System.String,System.Char)">
+            <summary>
+            Reads a field value from a reader and checks if it is null.  If the field is null, the default
+            argument is returned as the value.  Otherwise, the field value is returned.
+            </summary>
+            <param name="reader">The reader to read data from.</param>
+            <param name="field">The name of the column to read from.</param>
+            <param name="def">The default that will be returned if the column is null.</param>
+            <returns>The field value if not null, otherwise the default.</returns>
+            <remarks>Specialized for char since reading a single char requires slightly different operations.</remarks>
+            <see cref="M:Movement.Database.DBObject.SafeRead(System.Data.IDataReader,System.String,System.Char)"/>
+        </member>
+        <member name="M:Movement.Database.DBObject.Execute(System.Data.Common.DbConnection,System.String,System.Object[])">
+            <summary>
+            Executes a non-query command against a connection and an implicit transaction.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when Execute is called, the connection will be opened before
+            executing the stored procedure and then closed.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.ExecuteReader(System.Data.Common.DbConnection,System.String,System.Data.CommandBehavior,System.Object[])">
+            <summary>
+            Executes a command against a connection and an implicit transaction and returns a reader for reading the results.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="behavior">The behavior for the reader.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when ExecuteReader is called and behavior includes the 
+            CloseConnection behavior, then the connection is opened before executing the command.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.ExecuteScalar(System.Data.Common.DbConnection,System.String,System.Object[])">
+            <summary>
+            Executes a scalar query command against a connection and an implicit transaction.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when ExecuteScalar is called, the connection will be opened before
+            executing the stored procedure and then closed.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.BeginExecute(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String,System.Object[])">
+            <summary>
+            Begins execution of a non-query command against a connection and transaction.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="trans">The transaction to execute the command against, or null to use implicit transactioning.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>The connection must be opened.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.BeginExecute(System.Data.Common.DbCommand)">
+            <summary>
+            Begins execution of a non-query command against a connection and transaction.
+            </summary>
+            <param name="command">The command to begin executing.</param>
+            <remarks>The connection must be opened.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.EndExecute(System.IAsyncResult)">
+            <summary>
+            Completes execution of a previously asynchronously-executed command.
+            </summary>
+            <param name="r">The result of starting execution of an asynchronous command.</param>
+            <remarks>Null instances of IAsyncResult are ignored (for ease of callee) and -1 is returned.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.Execute(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String,System.Object[])">
+            <summary>
+            Executes a non-query command against a connection and transaction.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="trans">The transaction to execute the command against, or null to use implicit transactioning.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when Execute is called, the connection will be opened before
+            executing the stored procedure and then closed.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.ExecuteReader(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String,System.Data.CommandBehavior,System.Object[])">
+            <summary>
+            Executes a command against a connection and transaction and returns a reader for reading the results.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="trans">The transaction to execute the command against, or null to use implicit transactioning.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="behavior">The behavior for the reader.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when ExecuteReader is called and behavior includes the 
+            CloseConnection behavior, then the connection is opened before executing the command.</remarks>
+        </member>
+        <member name="M:Movement.Database.DBObject.ExecuteScalar(System.Data.Common.DbConnection,System.Data.Common.DbTransaction,System.String,System.Object[])">
+            <summary>
+            Executes a scalar query command against a connection and transaction.
+            </summary>
+            <param name="conn">The connection to execute the command on.</param>
+            <param name="trans">The transaction to execute the command against, or null to use implicit transactioning.</param>
+            <param name="command">The name of the stored procedure to execute.</param>
+            <param name="args">The arguments to the stored procedure, in (string)Name, (object)Value pairs.</param>
+            <remarks>If the connection is closed when ExecuteScalar is called, the connection will be opened before
+            executing the stored procedure and then closed.</remarks>
+        </member>
+        <member name="P:Movement.Database.DBObject.RetrievalTimestamp">
+            <summary>
+            The datetime that this object's data was last retrieved from the database (in UTC time).
+            </summary>
+            <remarks>This can be used as an indication as to the age of the data.  The older
+            the timestamp, the greater the chance that the data stored in the object may differ
+            from that stored in the database.</remarks>
+        </member>
+        <member name="M:Movement.Database.User.#ctor(System.Int32)">
+            <summary>
+            Constructs a new user instance given the user's database ID
+            and retrieves the user's information from the database.
+            </summary>
+            <param name="userID">The user's database ID.</param>
+        </member>
+        <member name="M:Movement.Database.User.CreateUser(System.String,System.String,System.Char,System.String,System.String)">
+            <summary>
+            Creates and stored a new user.
+            </summary>
+            <param name="username">The user's username.</param>
+            <param name="password">The user's password.</param>
+            <param name="role">The user's role.</param>
+            <param name="name">The name of the user.</param>
+            <param name="contactInfo">The user's contact information.</param>
+            <returns>The created user.</returns>
+        </member>
+        <member name="M:Movement.Database.User.RemoveUser(System.Int32)">
+            <summary>
+            Removes a user from the system.
+            </summary>
+            <param name="userID">The user's database id.</param>
+            <remarks>Tests and patients administered by this user may not be removed.</remarks>
+        </member>
+        <member name="M:Movement.Database.User.Login(System.String,System.String)">
+            <summary>
+            Logs a user into the system.
+            </summary>
+            <param name="username">The user's username.</param>
+            <param name="password">The user's password.</param>
+            <returns>The logged in user, or null if login failed.</returns>
+        </member>
+        <member name="P:Movement.Database.User.UserID">
+            <summary>
+            The user's database ID.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.Created">
+            <summary>
+            The timestamp when the user was created.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.LastLogin">
+            <summary>
+            The timestamp when the user last logged in, or DateTime.MinValue if the user has never logged in.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.Name">
+            <summary>
+            The user's name.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.ContactInfo">
+            <summary>
+            The user's contact info.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.Username">
+            <summary>
+            The user's username.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.Role">
+            <summary>
+            The user's role.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.User.Password">
+            <summary>
+            The user's password (write-only).
+            </summary>
+        </member>
+        <member name="T:Movement.Database.RecordNotFoundException">
+            <summary>
+            Occurs when an action requires a database record that does not exist.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestBatch">
+            <summary>
+            A collection of tests that can be run as a batch.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.TestBatch.#ctor(System.Int32)">
+            <summary>
+            Creates a new instance of a TestBatch given the test batch database ID
+            and retrieves the batch information from the database.
+            </summary>
+            <param name="testBatchID">The database ID for the test batch to retreive.</param>
+        </member>
+        <member name="M:Movement.Database.TestBatch.UpdateBatch(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Updates the tests associated with this test batch.
+            </summary>
+            <param name="newTestScriptIDs">A list of test script IDs, in order, that this batch should be composed of.</param>
+            <remarks>This test batch instance will be updated with the new test scripts.</remarks>
+        </member>
+        <member name="M:Movement.Database.TestBatch.GetTestBatches">
+            <summary>
+            Gets a list of all available test script batches in the database.
+            </summary>
+            <returns>The list of test script batches.</returns>
+        </member>
+        <member name="M:Movement.Database.TestBatch.CreateTestBatch(System.String,System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Creates a new test batch.
+            </summary>
+            <param name="name">The name of the batch.</param>
+            <param name="description">A description for the batch.</param>
+            <param name="testScriptIDs">A collection of script IDs, int order, that should compose this test batch.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Movement.Database.TestBatch.RemoveTestBatch(System.Int32)">
+            <summary>
+            Removes a test batch from the database.
+            </summary>
+            <param name="testBatchID">The database test batch ID to remove.</param>
+        </member>
+        <member name="P:Movement.Database.TestBatch.TestBatchID">
+            <summary>
+            The database ID for this test batch.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestBatch.Name">
+            <summary>
+            A name for this test batch.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestBatch.Description">
+            <summary>
+            A description for this test batch.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestBatch.TestScripts">
+            <summary>
+            A collection of scripts, in order, that compose this test batch.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.Patient">
+            <summary>
+            A patient that can take tests.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.Patient.#ctor(System.Int32)">
+            <summary>
+            Constructs a new patient instance given the patient's database ID
+            and retrieves the patient information from the database.
+            </summary>
+            <param name="patientID">The patient's database ID.</param>
+        </member>
+        <member name="M:Movement.Database.Patient.RecordNote(Movement.Database.User,System.String)">
+            <summary>
+            Stores a new note regarding this patient.
+            </summary>
+            <param name="author">The author of the note.</param>
+            <param name="data">The content of the note.</param>
+            <returns>The created note.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.GetAllTests">
+            <summary>
+            Gets all the tests that this patient has taken.
+            </summary>
+            <returns>A collection containing every test taken by this user.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.GetLastTests(System.Int32)">
+            <summary>
+            Gets the last n tests that this patient has taken.
+            </summary>
+            <param name="n">The number of tests to get, n > 0.</param>
+            <returns>A collection containing the last n tests taken by this user.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.CreatePatient(System.String,System.String,System.String,System.Char,System.DateTime,System.Char,System.String)">
+            <summary>
+            Creates and stores a new patient.
+            </summary>
+            <param name="name">The patient's name.</param>
+            <param name="address">The patient's address.</param>
+            <param name="contactInfo">The patient's contact information.</param>
+            <param name="sex">The patient's sex.</param>
+            <param name="dob">The patient's date of birth.</param>
+            <param name="handedness">The patient's dominant hand.</param>
+            <param name="ssn4">The last four digits of the patient's social security number.</param>
+            <returns>The created patient.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.FindPatient(System.String,System.DateTime)">
+            <summary>
+            Finds a patient given name and date of birth.
+            </summary>
+            <param name="name">The patient's name.</param>
+            <param name="dob">The patient's date of birth.</param>
+            <returns>A collection of matching patients.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.FindPatient(System.String,System.String)">
+            <summary>
+            Finds a patient given name and last 4 digits of ssn.
+            </summary>
+            <param name="name">The patient's name.</param>
+            <param name="ssn4">The last 4 digits of the patient's ssn.</param>
+            <returns>A collection of matching patients.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.FindPatient(System.String)">
+            <summary>
+            Finds a patient given their name.
+            </summary>
+            <param name="name">The patient's name.</param>
+            <returns>A collection of matching patients.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.FindPatient(System.DateTime,System.String)">
+            <summary>
+            Finds a patient given date of birth and last 4 digits of ssn.
+            </summary>
+            <param name="dob">The patient's date of birth.</param>
+            <param name="ssn4">The last 4 digits of the patient's ssn.</param>
+            <returns>A collection of matching patients.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.FindPatient(System.String,System.DateTime,System.String)">
+            <summary>
+            Finds a patient given date of birth and last 4 digits of ssn.
+            </summary>
+            <param name="name">The patient's name.</param>
+            <param name="dob">The patient's date of birth.</param>
+            <param name="ssn4">The last 4 digits of the patient's ssn.</param>
+            <returns>A collection of matching patients.</returns>
+        </member>
+        <member name="M:Movement.Database.Patient.RemovePatient(System.Int32)">
+            <summary>
+            Removes a patient from the system.
+            </summary>
+            <param name="patientID">The patient's database ID.</param>
+            <remarks>Test data collected about this patient may not be removed.</remarks>
+        </member>
+        <member name="P:Movement.Database.Patient.PatientID">
+            <summary>
+            The patient's database ID.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Created">
+            <summary>
+            The timestamp when the patient was created.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Name">
+            <summary>
+            The name of the patient.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Address">
+            <summary>
+            The address of the patient.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.ContactInfo">
+            <summary>
+            The contact info of the patient.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Sex">
+            <summary>
+            The patient's sex.
+            </summary>
+            <remarks>'M' = Male, 'F' = Female.</remarks>
+        </member>
+        <member name="P:Movement.Database.Patient.DOB">
+            <summary>
+            The patient's date of birth.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Handedness">
+            <summary>
+            The patient's dominant hand.
+            </summary>
+            <remarks>'L' = Left Hand, 'R' = Right Hand, 'A' = Ambidextrous.</remarks>
+        </member>
+        <member name="P:Movement.Database.Patient.SSN4">
+            <summary>
+            The last four digits of the patient's social security number.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Patient.Notes">
+            <summary>
+            Notes recorded about this patient.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.Test">
+            <summary>
+            A test taken by a patient.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.Test.#ctor(System.Int32)">
+            <summary>
+            Constructs a new test instance given the test's database ID
+            and retrieves the test information from the database.
+            </summary>
+            <param name="testID">The test's database ID.</param>
+        </member>
+        <member name="M:Movement.Database.Test.RecordNote(Movement.Database.User,System.String)">
+            <summary>
+            Stores a new note regarding this test.
+            </summary>
+            <param name="author">The author of the note.</param>
+            <param name="data">The content of the note.</param>
+            <returns>The created note.</returns>
+        </member>
+        <member name="M:Movement.Database.Test.CreateTest(Movement.Database.User,Movement.Database.Patient,System.Char,Movement.Database.TestScript,System.Char,System.Collections.Generic.IEnumerable{Movement.Database.TestDataSample},System.Double,System.Double,System.Int16)">
+            <summary>
+            Creates and stores a new test.
+            </summary>
+            <param name="user">The user that administered the test.</param>
+            <param name="patient">The patient that took the test.</param>
+            <param name="hand">The hand that the test was taken with.</param>
+            <param name="script">The script used to run the test.</param>
+            <param name="mode">The mode that the test was run in.</param>
+            <param name="data">The data collected during the test.</param>
+            <param name="meanX">The average x-coordinate of all the data collected.</param>
+            <param name="meanY">The average y-coordinate of all the data collected.</param>
+            <param name="rotation">The number of degrees that the test was rotated (from the positive x-axis) when taken.</param>
+            <returns>The created test.</returns>
+        </member>
+        <member name="P:Movement.Database.Test.TestID">
+            <summary>
+            The test's database ID.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.User">
+            <summary>
+            The user that administered the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Patient">
+            <summary>
+            The patient that took the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.TestScript">
+            <summary>
+            The script that was used to run the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Data">
+            <summary>
+            The data collected during the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Timestamp">
+            <summary>
+            The timestamp for the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Hand">
+            <summary>
+            The hand (R or L) that the test was taken with.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Mode">
+            <summary>
+            The mode that the test was run in.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Rotation">
+            <summary>
+            The rotation / orientation that the test was taken with, 
+            in positive degress counter-clockwise from the cartesian
+            x-axis.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Analysis">
+            <summary>
+            The analysis data available for this test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.AnalysisIsNormal">
+            <summary>
+            Checks if the available analysis data is within normal limits or not.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Test.Notes">
+            <summary>
+            Notes recorded about this test.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestData">
+            <summary>
+            A collection of samples in a test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestData.SampleCount">
+            <summary>
+            The number of samples in this test data collection.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestDataSample">
+            <summary>
+            A single sample in a test.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestDataSample.INVALID">
+            <summary>
+            An invalid test sample.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestDataSample.Time">
+            <summary>
+            The time in ms of the test sample since the start of the test.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestDataSample.X">
+            <summary>
+            The x-coord of the sample in mm.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestDataSample.Y">
+            <summary>
+            The y-coord of the sample in mm.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestDataSample.Pressure">
+            <summary>
+            The pressure level of the sample in mN.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestAnalysis">
+            <summary>
+            Analysis results computed for a single test.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.TestAnalysis.#ctor(System.Int32)">
+            <summary>
+            Constructs a new instance of the TestAnalysis class and gets analysis
+            data from the database for the specified test ID.
+            </summary>
+            <param name="testID">The database ID for the test for which to retrieve an analysis.</param>
+        </member>
+        <member name="P:Movement.Database.TestAnalysis.Components">
+            <summary>
+            The list of analysis components available in this instance.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestAnalysis.Item(Movement.Analysis.AnalysisMetric)">
+            <summary>
+            Accesses a specific analysis component in this instance.
+            </summary>
+            <param name="value">The metric to get the analysis for.</param>
+            <returns>The analysis result for the given metric.</returns>
+        </member>
+        <member name="T:Movement.Database.TestAnalysisComponentField">
+            <summary>
+            Identifies an attribute of the analysis component struct.
+            </summary>
+            <remarks>This enumeration must be synchronized with the metric_field table in the database.</remarks>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.Mean">
+            <summary>
+            The average value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.StdDev">
+            <summary>
+            The standard deviation value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.Min">
+            <summary>
+            The minimum value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.Max">
+            <summary>
+            The maximum value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.Sum">
+            <summary>
+            The sum of all the values.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponentField.Count">
+            <summary>
+            The number of values.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestAnalysisComponent">
+            <summary>
+            Part of a test analysis.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Metric">
+            <summary>
+            The part of the analysis represented.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Count">
+            <summary>
+            The number of values.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Sum">
+            <summary>
+            The sum of the values.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Mean">
+            <summary>
+            The average value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.StdDev">
+            <summary>
+            The standard deviation value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Min">
+            <summary>
+            The minimum value.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.TestAnalysisComponent.Max">
+            <summary>
+            The maximum value.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.Note">
+            <summary>
+            A general note.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Note.Timestamp">
+            <summary>
+            The timestamp that the note was created.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Note.Author">
+            <summary>
+            The author of the note.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.Note.Data">
+            <summary>
+            The content of the note.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.PatientNote">
+            <summary>
+            A patient-specific note.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.PatientNote.Patient">
+            <summary>
+            The patient relating to this note.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestNote">
+            <summary>
+            A test-specific note.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestNote.Test">
+            <summary>
+            The test relating to this note.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestScriptType">
+            <summary>
+            A test script type describes a test.
+            Many tests may have the same test script type
+            but different versions.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.TestScriptType.#ctor(System.Int32)">
+            <summary>
+            Constructs a new test script type instance given a type
+            and retrieves the type information from the database.
+            </summary>
+            <param name="typeID"></param>
+        </member>
+        <member name="M:Movement.Database.TestScriptType.GetLatestScript">
+            <summary>
+            Gets the latest (most recently defined - highest version number) 
+            test script that is of this test script type.
+            </summary>
+            <returns>The test script instance.</returns>
+        </member>
+        <member name="M:Movement.Database.TestScriptType.CreateTestScriptType(System.String,System.String)">
+            <summary>
+            Creates a new test script type and stores it in the database.
+            </summary>
+            <param name="name">The name of the test script type.</param>
+            <param name="description">The description.</param>
+            <returns>The created test script type.</returns>
+        </member>
+        <member name="M:Movement.Database.TestScriptType.GetTestScriptTypes">
+            <summary>
+            Gets a list of all available test script types in the database.
+            </summary>
+            <returns>The list of test script types.</returns>
+        </member>
+        <member name="P:Movement.Database.TestScriptType.TypeID">
+            <summary>
+            The database ID for this test script type.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScriptType.Name">
+            <summary>
+            The name of this test type.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScriptType.Description">
+            <summary>
+            The description for this test type.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.TestScript">
+            <summary>
+            A test script that can be used to drive the test engine.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.TestScript.#ctor(System.Int32)">
+            <summary>
+            Constructs a new test instance given the test script's id
+            and retrieves the test script information from the database.
+            </summary>
+            <param name="scriptID">The database ID for the script.</param>
+        </member>
+        <member name="M:Movement.Database.TestScript.CreateTestScript(System.Int32,System.String)">
+            <summary>
+            Creates a new script.
+            </summary>
+            <param name="type">The type of script to create.</param>
+            <param name="scriptData">The body of the script.</param>
+            <returns>The created script.</returns>
+        </member>
+        <member name="P:Movement.Database.TestScript.ScriptID">
+            <summary>
+            The database ID for this test script.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScript.ScriptType">
+            <summary>
+            The test script type.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScript.Version">
+            <summary>
+            The script version.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScript.ScriptData">
+            <summary>
+            The body of the script.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.TestScript.NormalAnalysis">
+            <summary>
+            The analysis results expected for this test script.
+            </summary>
+        </member>
+        <member name="T:Movement.Database.NormativeAnalysis">
+            <summary>
+            Analysis results expected for a kind of test.
+            </summary>
+        </member>
+        <member name="M:Movement.Database.NormativeAnalysis.#ctor(System.Int32)">
+            <summary>
+            Constructs a new instance of the NormativeAnalysis class and gets analysis
+            data from the database for the specified script ID.
+            </summary>
+            <param name="testID">The database ID for the script for which to retrieve a normative analysis.</param>
+        </member>
+        <member name="M:Movement.Database.NormativeAnalysis.IsNormal(Movement.Database.TestAnalysis)">
+            <summary>
+            Determines if a test analysis is normal (within normal limits) based on this normative analysis.
+            </summary>
+            <param name="analysis">The analysis results to check.</param>
+            <returns>True if the test analysis is within normal limits, otherwise false.</returns>
+        </member>
+        <member name="M:Movement.Database.NormativeAnalysis.IsNormal(Movement.Database.TestAnalysisComponent)">
+            <summary>
+            Determines if a test analysis component is normal (within normal limits) based on this normative analysis.
+            </summary>
+            <param name="analysisComponent">The analysis component (a single result) to check.</param>
+            <returns>True if the test analysis component is within normal limits, otherwise false.</returns>
+        </member>
+        <member name="P:Movement.Database.NormativeAnalysis.Components">
+            <summary>
+            The list of analysis components available in this instance.
+            </summary>
+        </member>
+        <member name="P:Movement.Database.NormativeAnalysis.Item(Movement.Analysis.AnalysisMetric)">
+            <summary>
+            Accesses a specific analysis component in this instance.
+            </summary>
+            <param name="value">The metric to get the analysis for.</param>
+            <returns>The analysis result for the given metric.</returns>
+        </member>
+        <member name="T:Movement.Database.NormativeAnalysisComponent">
+            <summary>
+            Part of a normative analysis.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.NormativeAnalysisComponent.Metric">
+            <summary>
+            The test analysis component that this checks.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.NormativeAnalysisComponent.Field">
+            <summary>
+            The field of the test analysis component that this checks.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.NormativeAnalysisComponent.Min">
+            <summary>
+            The minimum value expected.
+            </summary>
+        </member>
+        <member name="F:Movement.Database.NormativeAnalysisComponent.Max">
+            <summary>
+            The maximum value expected.
+            </summary>
+        </member>
+    </members>
+</doc>

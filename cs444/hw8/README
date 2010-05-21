@@ -1,0 +1,15 @@
+CS 444
+
+HW8 
+
+Mike Hadley and Jim Licata
+
+Unix Scheme
+
+In the unix scheme, a pthread mutex and condition variable is used for thread synchronization. For producer and consumer threads, if the buffer is full or empty (respectively), then the thread will wait on a condition variable. This condition variable will be signaled by the consumer/producer (respectively) once an item in the buffer has been deleted, or another item has been added. Only one mutex lock is used, as well as only one condition variable.  Mesa semantics are used to recheck the buffer state.
+
+Windows Scheme
+
+In the windows scheme, mutex and event objects were used to replace pthread mutex locks and condition variables as used in the unix scheme. One mutex is used for the producer and consumer threads, as well as two event objects. One event object is used to wake up consumer threads who are waiting for the producer (waiting on if(fifo->empty)) to populate the buffer. The other event object is used to wake up the producer thread waiting for consumers to "consume" a full buffer. Essentially, the producer and consumer threads grab the mutex, see if the buffer is full or empty (depending on if the thread is a producer or consumer, respectively), waits on the proper event if necessary, and then does the C.S. and releases mutex. A semaphore is not implemented (not needed).
+
+

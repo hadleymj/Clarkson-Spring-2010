@@ -1,0 +1,23 @@
+Initial Grid:
+
+92	53	92	55	99	
+60	37	55	55	91	
+28	12	73	38	40	
+40	85	43	96	70	
+41	60	61	34	5	
+
+Initial Sum:  1415
+Executing threads...
+
+Final Grid:
+
+96	91	5	85	55	
+61	60	40	92	92	
+55	99	40	73	34	
+41	55	37	70	12	
+43	28	38	53	60	
+
+
+Final Sum:  1415
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  200

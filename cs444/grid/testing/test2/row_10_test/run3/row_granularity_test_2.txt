@@ -1,0 +1,17 @@
+Initial Grid:
+
+5	0	
+87	70	
+
+Initial Sum:  162
+Executing threads...
+
+Final Grid:
+
+0	87	
+5	70	
+
+
+Final Sum:  162
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  195

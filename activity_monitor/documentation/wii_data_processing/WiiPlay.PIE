@@ -1,0 +1,22 @@
+//Wiilo v0.1 
+//Made by Phant0m 
+//For more information and updates go to h t t p : / /p h a n t 0 m .b l o g . v u/ 
+//To auto calibrate just press Space bar or Button1 on your WiiMote 
+//When auto calibrating please put the wiimote flat and do not move it 
+
+//Show WiiMote forces 
+debug = "X="+var.xRot+" Y="+var.yRot+" Z="+var.zRot 
+
+
+var.x = Wiimote.RawForceX = 0 
+var.y = Wiimote.RawForceY = 0 
+var.z = Wiimote.RawForceZ = 0 
+
+var.xRot = Wiimote.RawForceX
+var.yRot = Wiimote.RawForceY
+var.zRot = Wiimote.RawForceZ
+
+var.c++
+
+OutputToFile(Wiimote.RawForceX+","+Wiimote.RawForceY+","+Wiimote.RawForceZ)
+

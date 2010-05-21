@@ -1,0 +1,18 @@
+@pre true
+@post forall ix. ((0 <= ix && ix < |rv| && a_0[ix] < 0 ->(rv[ix] = -a_0[ix])) ||
+	       	(0 <= ix && ix < |rv| && a_0[ix] >= 0 -> (rv[ix] = a_0[ix])))
+
+int[] abs(int[] a_0) {
+	int[] a := a_0;
+	for
+		@L: forall ix. ((0 <= ix && ix < i  && a_0[ix] < 0 -> (a[ix] = -a_0[ix])) ||
+				(0 <= ix && ix < i  && a_0[ix] >= 0 -> (a[ix] = a_0[ix])))
+		 (int i := 0; i < |a|; i := i + 1) 
+	{
+		if (a[i] < 0) {
+			a[i] := -a[i];
+		}
+	}
+	return a;
+}
+

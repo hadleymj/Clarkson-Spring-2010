@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getRequest">
+        <s:complexType />
+      </s:element>
+      <s:element name="getRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uploadStats">
+        <s:complexType />
+      </s:element>
+      <s:element name="uploadStatsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendTask">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendTaskResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="sendACK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="good" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendACKResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="disconnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="disconnectResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:getRequest" />
+  </wsdl:message>
+  <wsdl:message name="getRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:getRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:uploadStats" />
+  </wsdl:message>
+  <wsdl:message name="uploadStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:uploadStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:sendTask" />
+  </wsdl:message>
+  <wsdl:message name="sendTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:sendTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendACKSoapIn">
+    <wsdl:part name="parameters" element="tns:sendACK" />
+  </wsdl:message>
+  <wsdl:message name="sendACKSoapOut">
+    <wsdl:part name="parameters" element="tns:sendACKResponse" />
+  </wsdl:message>
+  <wsdl:message name="disconnectSoapIn">
+    <wsdl:part name="parameters" element="tns:disconnect" />
+  </wsdl:message>
+  <wsdl:message name="disconnectSoapOut">
+    <wsdl:part name="parameters" element="tns:disconnectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PDAConnectionSoap">
+    <wsdl:operation name="getRequest">
+      <wsdl:input message="tns:getRequestSoapIn" />
+      <wsdl:output message="tns:getRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadStats">
+      <wsdl:input message="tns:uploadStatsSoapIn" />
+      <wsdl:output message="tns:uploadStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendTask">
+      <wsdl:input message="tns:sendTaskSoapIn" />
+      <wsdl:output message="tns:sendTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendACK">
+      <wsdl:input message="tns:sendACKSoapIn" />
+      <wsdl:output message="tns:sendACKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnect">
+      <wsdl:input message="tns:disconnectSoapIn" />
+      <wsdl:output message="tns:disconnectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PDAConnectionSoap" type="tns:PDAConnectionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getRequest">
+      <soap:operation soapAction="http://tempuri.org/getRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadStats">
+      <soap:operation soapAction="http://tempuri.org/uploadStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendTask">
+      <soap:operation soapAction="http://tempuri.org/sendTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendACK">
+      <soap:operation soapAction="http://tempuri.org/sendACK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnect">
+      <soap:operation soapAction="http://tempuri.org/disconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PDAConnectionSoap12" type="tns:PDAConnectionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getRequest">
+      <soap12:operation soapAction="http://tempuri.org/getRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadStats">
+      <soap12:operation soapAction="http://tempuri.org/uploadStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendTask">
+      <soap12:operation soapAction="http://tempuri.org/sendTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendACK">
+      <soap12:operation soapAction="http://tempuri.org/sendACK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnect">
+      <soap12:operation soapAction="http://tempuri.org/disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PDAConnection">
+    <wsdl:port name="PDAConnectionSoap" binding="tns:PDAConnectionSoap">
+      <soap:address location="http://localhost:4757/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PDAConnectionSoap12" binding="tns:PDAConnectionSoap12">
+      <soap12:address location="http://localhost:4757/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

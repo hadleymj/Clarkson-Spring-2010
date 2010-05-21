@@ -1,0 +1,217 @@
+CS444
+
+Mike Hadley and Jim Licata
+
+1)
+	a). Deadlock is absolutely possible. With both semaphores starting out with a value of 1, imagine a scenario in which an Inbound ship
+	    enters the lock. It will issue a down on gate2OK, decrementing its value to 0.  
+	Now, if we have an Outbound ship entering the lock at the same time, we would have the ship issuing a down on gate1OK, 
+	decrementing this value to 0 also. At this point, deadlock occurs. Each ship would enter the lock, 
+	but they will both hang on down(gate1OK) (for the Inbound ship) and down(gate2OK) (for the Outbound ship) since the values for both semaphores are 0. 
+	The below trace illustrates this:
+
+	Inbound Ship:					Outbound Ship:
+
+	down(gate2OK)					
+		open gate2;
+		**Context Switch***
+							down(gate1OK)
+								open gate1; // At this point both gates are open (flood)
+								enter the lock;
+								***Context Switch***
+
+		enter the lock; // Note that two ships are now in the lock
+		close gate2;
+		down(gate1OK); // BLOCKS, semaphore had an initial value of 1
+		***Context Switch***
+								close gate1;
+								down(gate2OK); // BLOCKS, semaphore had an initial value of 1
+
+		//DEADLOCK results, each thread needs a resource that the other thread holds
+		// An Impasse also results, as both ships are in the lock, but they cannot get out
+
+	b). Yes, a flood is possible. There is nothing stopping two threads from executing a down on the two separate gates. 
+	    As the above question would indicate, this will result in deadlock. The implementation *should* remedy this by a sort of "all or nothing" approach. 
+          Force a thread to claim control over the two gates, or not at all (similar to a possible solution to the dining philosophers problem). 
+	c). Yes this is possible. This is evident in the deadlock scenario. Refer to question a). 
+	d). No, the code does not have this property. This is because there is nothing incorporated into the code that allows for the waiting time for the water in the lock to rise/fall. 
+          The code for outbound ships:
+
+		down(gate1OK); 
+		open gate1;
+		enter the lock;
+		close gate1;
+
+There is nothing that waits for the water level to rise. The ship just opens the gate and enters the lock. 
+Note that this is why the lock is most efficient with alternating ship directions (a ship never has to wait for the water level to change). 
+
+
+2). 
+
+**************************************************************
+SEMAPHORE
+**************************************************************
+
+   boolean gate1, gate2: /* initially both gates are closed */
+   semaphore gate1OK = 1;
+   semaphore gate2OK = 1;
+   int waiting_outbound = 0;
+   int waiting_inbound = 0;
+   int water_level = 0;
+   int turn = 0;
+   
+   Process for Inbound ships:
+   -------------------------
+   void inbound (){
+	waiting_inbound++; // new inbound ship
+	do
+	{
+		down(gate2OK);     /* note that wait(S) == down(S) == P(S) for semaphore S */
+		down(gate1OK);  // make sure to issue a down on the semaphore in the SAME order as the outbound ships
+	}while(turn != 0); // If turn is not 0, then go back to sleep (mesa semantics)
+
+           if (water_level == 1)
+	   {
+		sleep(5); // sleep for some period of time to wait for the water to rise
+		water_level = 0; 
+           }
+           open gate2;
+           enter the lock;
+           close gate2;
+	   sleep(5); // wait for the water level to rise
+	   water_level = 1;
+	   open gate1;
+	   leave the lock;
+	   close gate1;
+	waiting_inbound--; // 
+	if(waiting_outbound)
+	{
+		turn  = 1; // if there is a waiting outbound ship, make sure to do that one next (alternate)
+           	up(gate1OK);   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	up(gate2OK);
+	}
+	else
+	{
+		// If there are no outbound ships, leave turn = 0 and wake up the next ship	
+           	up(gate1OK);   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	up(gate2OK);
+	}
+}
+
+   Process for Outbound ships:
+   ---------------------------
+   void outbound (){
+	waiting_outbound++; // one more outbound ship
+	do 
+	{
+		down(gate2OK); //down issued in the same order as the inbound ships (gate2, gate1) to avoid deadlock
+		down(gate1OK);
+	}while(turn != 1); // If turn is not 1, then go back to sleep (mesa semantics), (there must have been another inbound  ship waiting)
+           open gate1;
+           if (water_level == 0) // water level needs to be 1 for an outbound ship
+	   {
+		sleep(5); // sleep for some period of time to wait for the water to rise
+		water_level = 1;
+	   }
+           enter the lock;
+           close gate1;
+	   sleep(5); // wait for the water level to lower 
+	   water_level = 0;
+           open gate2;
+           leave the lock;
+           close gate2;
+	waiting_outbound--;
+	if(waiting_inbound)
+	{
+		turn  = 0;// if there is a waiting inbound ship, make sure to do that one next (alternate)
+           	up(gate1OK);   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	up(gate2OK);
+	}
+	else
+	{
+		// If there are no inbound ships, leave turn = 1 and wake up the next ship	
+           	up(gate1OK);   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	up(gate2OK);
+	}
+}
+
+**************************************************************
+MONITOR
+**************************************************************
+
+Monitor MassenaLocks{
+
+cond gate1OK;
+cond gate2OK;
+int waiting_outbound = 0;
+int waiting_inbound = 0;
+int water_level = 0;
+int turn = 0;
+
+inbound(){
+	waiting_inbound++;
+	do {
+		gate2OK.wait();     /* note that wait(S) == down(S) == P(S) for semaphore S */
+		gate1OK.wait();
+	}while(turn != 0); // If turn is not 0, then go back to sleep (mesa semantics)
+           if (water_level == 1)
+	   {
+		sleep(5); // sleep for some period of time to wait for the water to rise
+		water_level = 0;
+	   }
+           open gate2;
+           enter the lock;
+           close gate2;
+	   sleep(5);
+	   water_level = 1;
+	   open gate1;
+	   leave the lock;
+	   close gate1;
+	waiting_inbound--;
+	if(waiting_outbound)
+	{
+		turn  = 1;
+           	gate1OK.signal();   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	gate2OK.signal();
+	}
+	else
+	{
+		
+		gate1OK.signal();   /* note that signal(S) == up(S) == V(S) for semaphore S */
+		gate2OK.signal();
+	}
+}
+outbound(){
+	waiting_outbound++;
+	do {
+		gate2OK.wait();     /* note that wait(S) == down(S) == P(S) for semaphore S */
+		gate1OK.wait();
+	}while(turn != 1);
+           if (water_level == 0)
+	   {
+		sleep(5); // sleep for some period of time to wait for the water to rise
+		water_level = 1;
+	   }
+           open gate2;
+           enter the lock;
+           close gate2;
+	   sleep(5);
+	   water_level = 1;
+	   open gate1;
+	   leave the lock;
+	   close gate1;
+	waiting_outbound--;
+	if(waiting_inbound)
+	{
+		turn  = 0;
+           	gate1OK.signal();   /* note that signal(S) == up(S) == V(S) for semaphore S */
+        	gate2OK.signal();
+	}
+	else
+	{
+		
+		gate1OK.signal();   /* note that signal(S) == up(S) == V(S) for semaphore S */
+		gate2OK.signal();
+	}
+}
+}

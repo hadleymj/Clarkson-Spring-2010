@@ -1,0 +1,41 @@
+Steve, John, Brett, Ryan, Jon, Jacor, Andrew, Mike
+
+Saturday progress reports and meetings 2:00.
+
+
+MOVEMENT Maintenance -- Setup on Laptop 
++Andrew
+Jon
+Jacor
+
+Stand up and get working in local mode. Follow directions.
+
+
+
+Fix SRS
++Mike
+Steve
+Brett
+
+Enter her revisions and check continuity. Make things very specific.
+
+
+
+Software Design Document?
++John
+Jim
+Joe
+
+Very rough draft.  Template with strawman filling. Write Strawman at the top.
+
+
+
+Spike Solutions to Activity Monitor
+Andrew
++Ryan
+Mike
+
+Data from Wii to PDA is the objective. (Secondary PDA to Server through bt, usb, IR, WiFi)
+
+
+(+ is the group owner)

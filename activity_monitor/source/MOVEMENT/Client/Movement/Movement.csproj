@@ -1,0 +1,229 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6735E13-097A-42DF-983E-A70FE274DBA8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Movement.UserInterface</RootNamespace>
+    <AssemblyName>Movement</AssemblyName>
+    <ApplicationIcon>Movement.ico</ApplicationIcon>
+    <StartupObject>Movement.UserInterface.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ink, Version=1.7.2600.2180, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Movement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movement.Designer.cs">
+      <DependentUpon>Movement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs" />
+    <Compile Include="PatientNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientNotes.Designer.cs">
+      <DependentUpon>PatientNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Movement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientNotes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PatientNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPreview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskList.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TestPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPatient.Designer.cs">
+      <DependentUpon>TestPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPreview.Designer.cs">
+      <DependentUpon>TestPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="Web References\movement_web_service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServicer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Movement.ico" />
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\add_patient.png" />
+    <None Include="Resources\add_patient32.png" />
+    <Content Include="Resources\arrow.png" />
+    <None Include="Resources\Information64.png" />
+    <None Include="Web References\movement_web_service\Batch1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\Data.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\Notes1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\PatientObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\movement_web_service\Script1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\ScriptInfo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\Service.disco" />
+    <None Include="Resources\arrow_gray.png" />
+    <None Include="Resources\movement64.png" />
+    <None Include="Resources\movement32.png" />
+    <None Include="Resources\testBatch32.png" />
+    <None Include="Resources\btn_remove_test.Image.png" />
+    <None Include="Resources\btn_move_test_up.Image.png" />
+    <None Include="Resources\btn_move_test_down.Image.png" />
+    <None Include="Resources\btn_add_test.Image.png" />
+    <None Include="Resources\file-manager.png" />
+    <None Include="Resources\testBatch64.png" />
+    <None Include="Resources\history32.png" />
+    <None Include="Resources\newUser64.png" />
+    <None Include="Resources\totem copy.png" />
+    <None Include="Resources\blank.png" />
+    <None Include="Resources\retrieve_patient.png" />
+    <None Include="Resources\settings64.png" />
+    <None Include="Resources\user64.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Web References\movement_web_service\Service.wsdl" />
+    <None Include="Web References\movement_web_service\Test1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\movement_web_service\UserObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://crusoe.camp.clarkson.edu/Movement/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\movement_web_service\</RelPath>
+      <UpdateFromURL>http://crusoe.camp.clarkson.edu/Movement/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Movement_movement_web_service_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Analysis.Graphing\Movement.Analysis.Graphing.csproj">
+      <Project>{2758296B-862F-4CAC-8C13-1268B33937EE}</Project>
+      <Name>Movement.Analysis.Graphing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Analysis\Movement.Analysis.csproj">
+      <Project>{E6C1D779-4A49-4B03-AF32-B1B391781EF2}</Project>
+      <Name>Movement.Analysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Scripting\Movement.Scripting.csproj">
+      <Project>{05AFDBA5-59D6-4C3C-801D-EFF5A18E1AA5}</Project>
+      <Name>Movement.Scripting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TestEngine\Movement.TestEngine.csproj">
+      <Project>{D57FA2E4-D1E4-4225-AA3A-BFAF61FD3D2B}</Project>
+      <Name>Movement.TestEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

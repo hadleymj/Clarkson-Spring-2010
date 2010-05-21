@@ -1,0 +1,3420 @@
+Revision: 268
+Author: licataja
+Date: 10:57:41 AM, Tuesday, December 08, 2009
+Message:
+Changed a few things, still a lot that could be done.
+----
+Modified : /ee418/documentation/TestPlan V1.doc
+
+Revision: 267
+Author: deyosa
+Date: 12:27:59 AM, Tuesday, December 08, 2009
+Message:
+Final Version With Add/Edit Daily Task and View Patient
+----
+Added : /ee418/source/webui/webui/guis/add_task.php
+Added : /ee418/source/webui/webui/guis/add_task_choose.php
+Added : /ee418/source/webui/webui/guis/add_task_script.php
+Added : /ee418/source/webui/webui/guis/edit_task.php
+Added : /ee418/source/webui/webui/guis/edit_task_script.php
+Modified : /ee418/source/webui/webui/guis/patient_display.php
+Modified : /ee418/source/webui/webui/guis/patient_update_script.php
+Added : /ee418/source/webui/webui/guis/remove_task.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 266
+Author: licataja
+Date: 8:04:16 PM, Monday, December 07, 2009
+Message:
+Fixed all the GUIs.
+----
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+
+Revision: 265
+Author: ellisjc
+Date: 2:00:39 PM, Monday, December 07, 2009
+Message:
+Testplan.  Some input for others needed.
+----
+Added : /ee418/documentation/TestPlan V1.doc
+
+Revision: 257
+Author: licataja
+Date: 2:17:13 PM, Friday, December 04, 2009
+Message:
+Made GUIs look nice, still can't figure out the scroll issue.
+----
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.resx
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+
+Revision: 256
+Author: edgars
+Date: 10:56:47 AM, Friday, December 04, 2009
+Message:
+Added a disconnect statement.
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+
+Revision: 255
+Author: edgars
+Date: 10:53:50 AM, Friday, December 04, 2009
+Message:
+Added Environment.Exit(1) in an attempt to exit the application.
+----
+Modified : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Wiimote.cs
+
+Revision: 254
+Author: edgars
+Date: 10:37:18 AM, Friday, December 04, 2009
+Message:
+Added the ability for the wiiwm_driver to send a disconnect to the laptop which should disconnect the Wii remote.
+----
+Modified : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Wiimote.cs
+
+Revision: 253
+Author: edgars
+Date: 9:25:49 AM, Friday, December 04, 2009
+Message:
+Renamed Counter-Clockwise to Reverse Spiral.
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 252
+Author: edgars
+Date: 9:25:12 AM, Friday, December 04, 2009
+Message:
+Removed project reference to non-existent App.Config file.
+----
+Modified : /ee418/source/MOVEMENT/Database/Interface/Movement.Database.csproj
+
+Revision: 251
+Author: ellisjc
+Date: 10:55:57 PM, Thursday, December 03, 2009
+Message:
+No mo curses
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_Alert.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/Wii_Alert.cs
+
+Revision: 250
+Author: ellisjc
+Date: 10:55:45 PM, Thursday, December 03, 2009
+Message:
+No mo curses
+----
+Modified : /ee418/source/pda/PDA_GUI/Laptop_Alert.cs
+Modified : /ee418/source/pda/PDA_GUI/ServerConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/Wii_Alert.cs
+
+Revision: 249
+Author: ellisjc
+Date: 10:53:22 PM, Thursday, December 03, 2009
+Message:
+.Doc version of the manual Jim and I made.
+----
+Added : /ee418/documentation/User Manual.doc
+
+Revision: 248
+Author: edgars
+Date: 10:23:22 PM, Thursday, December 03, 2009
+Message:
+Changed the DateTime formatting to be AddMilliseconds instead of AddSeconds. Now the final Save to the server works.
+----
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj.user
+Modified : /ee418/source/pda/PDA_GUI/ServerConnection.cs
+
+Revision: 247
+Author: ellisjc
+Date: 10:10:50 PM, Thursday, December 03, 2009
+Message:
+milliseconds
+----
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+
+Revision: 246
+Author: ellisjc
+Date: 10:10:23 PM, Thursday, December 03, 2009
+Message:
+PDA
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+
+Revision: 245
+Author: ellisjc
+Date: 9:53:00 PM, Thursday, December 03, 2009
+Message:
+sd balls
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+
+Revision: 244
+Author: ellisjc
+Date: 9:37:12 PM, Thursday, December 03, 2009
+Message:
+Size change
+----
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+
+Revision: 243
+Author: ellisjc
+Date: 9:27:38 PM, Thursday, December 03, 2009
+Message:
+More Awesome
+----
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/Program.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+
+Revision: 242
+Author: atutisam
+Date: 9:04:45 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/add_patient.php
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/patient_display.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/show_stats.php
+Modified : /ee418/source/webui/webui/guis/stats.php
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 241
+Author: atutisam
+Date: 9:01:12 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/add_patient.php
+
+Revision: 240
+Author: atutisam
+Date: 8:59:55 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/stats.php
+
+Revision: 239
+Author: atutisam
+Date: 8:59:11 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/patient_display.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/show_stats.php
+Modified : /ee418/source/webui/webui/guis/stats.php
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 238
+Author: deyosa
+Date: 8:58:35 PM, Thursday, December 03, 2009
+Message:
+Updated CSS
+----
+Modified : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 237
+Author: atutisam
+Date: 8:50:46 PM, Thursday, December 03, 2009
+Message:
+
+----
+Added : /ee418/source/webui/webui/guis/show_stats.php
+Added : /ee418/source/webui/webui/guis/stats.php
+
+Revision: 236
+Author: ellisjc
+Date: 8:45:13 PM, Thursday, December 03, 2009
+Message:
+Dr. Bearington is bigger.
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj.user
+
+Revision: 235
+Author: edgars
+Date: 8:38:40 PM, Thursday, December 03, 2009
+Message:
+Test connection is completed and working.
+----
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+
+Revision: 234
+Author: ellisjc
+Date: 8:36:52 PM, Thursday, December 03, 2009
+Message:
+test connection
+----
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+
+Revision: 233
+Author: deyosa
+Date: 8:34:25 PM, Thursday, December 03, 2009
+Message:
+Fixed some CSS
+more on Patient Update
+----
+Modified : /ee418/source/webui/webui/guis/patient_display.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 232
+Author: ellisjc
+Date: 8:32:44 PM, Thursday, December 03, 2009
+Message:
+Fixed test connection
+----
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+
+Revision: 231
+Author: ellisjc
+Date: 8:23:15 PM, Thursday, December 03, 2009
+Message:
+User manual
+----
+Added : /ee418/documentation/User Manual.txt
+
+Revision: 230
+Author: edgars
+Date: 8:11:39 PM, Thursday, December 03, 2009
+Message:
+Attempting to fix the Wii Remote Connection.
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/ServerConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+
+Revision: 229
+Author: hadleymj
+Date: 7:19:04 PM, Thursday, December 03, 2009
+Message:
+Modified the WM Driver to send out a FIN message upon disconnect. Also cascade so that the Laptop pass-through disconnects from the Wii Remote and stops writing data to the pdaWriteBuf.
+----
+Modified : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Wiimote.cs
+Modified : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.cpp
+
+Revision: 228
+Author: ellisjc
+Date: 7:14:14 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.disco
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.cs
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.map
+
+Revision: 227
+Author: edgars
+Date: 7:12:03 PM, Thursday, December 03, 2009
+Message:
+Added try catch around Read to avoid IOException when there is an error connecting to the WiiRemote.
+----
+Modified : /ee418/source/wiiwm/wiiwm/Wiimote.cs
+Modified : /ee418/source/wiiwm/wiiwm/wiiwm.csproj.user
+
+Revision: 226
+Author: ellisjc
+Date: 7:06:10 PM, Thursday, December 03, 2009
+Message:
+PDA should be good besides connection stuff
+----
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/ServerConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.resx
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+
+Revision: 225
+Author: deyosa
+Date: 5:23:32 PM, Thursday, December 03, 2009
+Message:
+Removed garbage in update_patient
+----
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 224
+Author: deyosa
+Date: 5:20:45 PM, Thursday, December 03, 2009
+Message:
+Removed the extra lines that SOMEONE put it (cough Ryan cough)
+----
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/StatsDAO.php
+Modified : /ee418/source/webui/webui/daos/WalkingStatsDAO.php
+Modified : /ee418/source/webui/webui/daos/db_include.php
+Added : /ee418/source/webui/webui/guis/patient_display.php
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 223
+Author: ellisjc
+Date: 5:17:29 PM, Thursday, December 03, 2009
+Message:
+ryan sucks
+----
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.disco
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.cs
+Modified : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.map
+
+Revision: 222
+Author: ellisjc
+Date: 5:03:41 PM, Thursday, December 03, 2009
+Message:
+Ryan broke it again.....
+----
+Modified : /ee418/source/pda/PDA_GUI/AlertGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+
+Revision: 221
+Author: ellisjc
+Date: 4:49:31 PM, Thursday, December 03, 2009
+Message:
+committed ryan's changes
+----
+Modified : /ee418/source/pda/PDA_GUI/ConfigFile.cs
+
+Revision: 220
+Author: edgars
+Date: 4:37:41 PM, Thursday, December 03, 2009
+Message:
+Added references to WiiWM and ActivityMonitorService.
+----
+Modified : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Modified : /ee418/source/pda/PDA_GUI/ConfigFile.cs
+Modified : /ee418/source/pda/PDA_GUI/Connection.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Added : /ee418/source/pda/PDA_GUI/Web References
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.disco
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/DailyTask.datasource
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.cs
+Added : /ee418/source/pda/PDA_GUI/Web References/Server_Connection/Reference.map
+
+Revision: 219
+Author: egglesjp
+Date: 4:33:46 PM, Thursday, December 03, 2009
+Message:
+more admin pages - update clinician & script for it.  removed links for update clinician - done by selecting clinician in the list clinicians page.
+----
+Modified : /ee418/source/webui/webui/admin/add_clinician.php
+Modified : /ee418/source/webui/webui/admin/clinician_script.php
+Added : /ee418/source/webui/webui/admin/clinician_update_script.php
+Added : /ee418/source/webui/webui/admin/clinicians.php
+Modified : /ee418/source/webui/webui/admin/homepage.php
+Added : /ee418/source/webui/webui/admin/update_clinician.php
+
+Revision: 218
+Author: ellisjc
+Date: 4:28:55 PM, Thursday, December 03, 2009
+Message:
+PDA_GUI updated to Laptop_GUI standards
+----
+Added : /ee418/source/pda/PDA_GUI/Alert.cs
+Added : /ee418/source/pda/PDA_GUI/AlertGUI.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/AlertGUI.cs
+Added : /ee418/source/pda/PDA_GUI/AlertGUI.resx
+Added : /ee418/source/pda/PDA_GUI/ClinicianGUI.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/ClinicianGUI.cs
+Added : /ee418/source/pda/PDA_GUI/ClinicianGUI.resx
+Added : /ee418/source/pda/PDA_GUI/ConfigFile.cs
+Added : /ee418/source/pda/PDA_GUI/Connection.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Added : /ee418/source/pda/PDA_GUI/DrBearington.bmp
+Added : /ee418/source/pda/PDA_GUI/Laptop_Alert.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.resx
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/Program.cs
+Added : /ee418/source/pda/PDA_GUI/ServerConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Added : /ee418/source/pda/PDA_GUI/Wii_Alert.cs
+
+Revision: 217
+Author: deyosa
+Date: 4:24:17 PM, Thursday, December 03, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/add_patient.php
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 216
+Author: edgars
+Date: 3:41:50 PM, Thursday, December 03, 2009
+Message:
+The UpLoad stats has been tested and has passed preliminary tests.
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+
+Revision: 215
+Author: edgars
+Date: 3:34:51 PM, Thursday, December 03, 2009
+Message:
+This application can now read data from the Wii Remote and parse it.
+----
+Modified : /ee418/source/pda/PDA_GUI
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj.user
+Modified : /ee418/source/pda/PDA_GUI/RawData.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteData.cs
+Deleted : /ee418/source/pda/PDA_GUI/bin
+Deleted : /ee418/source/pda/PDA_GUI/obj
+
+Revision: 210
+Author: edgars
+Date: 7:24:29 AM, Thursday, December 03, 2009
+Message:
+Added more rows to the Statistics and WalkingStats tables in order to thoroughly test the new webui StatsDAOs.
+----
+Modified : /ee418/source/database/ee418_data.sql
+
+Revision: 209
+Author: edgars
+Date: 7:23:24 AM, Thursday, December 03, 2009
+Message:
+Tested and debugged the Statistics code. There were several issues all of which were fixed. Note: The daotest.php contains the code to test the StatsDAOs. Also this uses the latest version of ee418_data.sql which was updated just now.
+----
+Modified : /ee418/source/webui/webui/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui/webui/daos/WalkingStatsDAO.php
+Modified : /ee418/source/webui/webui/daos/db_queries.php
+Modified : /ee418/source/webui/webui/daotest.php
+
+Revision: 208
+Author: hadleymj
+Date: 10:26:42 PM, Wednesday, December 02, 2009
+Message:
+Added the StatisticsDAOs but have not tested them yet. They will be tested shortly, so in the mean time use an older revision or be patient.
+----
+Modified : /ee418/source/webui/webui/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Added : /ee418/source/webui/webui/daos/StatsDAO.php
+Added : /ee418/source/webui/webui/daos/WalkingStatsDAO.php
+Modified : /ee418/source/webui/webui/daos/db_include.php
+Modified : /ee418/source/webui/webui/daos/db_queries.php
+Modified : /ee418/source/webui/webui/daotest.php
+
+Revision: 206
+Author: ellisjc
+Date: 10:26:31 AM, Wednesday, December 02, 2009
+Message:
+C-
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 204
+Author: ellisjc
+Date: 11:30:49 PM, Tuesday, December 01, 2009
+Message:
+C- stuff
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 202
+Author: edgars
+Date: 10:31:43 PM, Tuesday, December 01, 2009
+Message:
+Added counter clockwise spiral - Attempt #3. (There may be many attempts as MATLAB is on one computer and Movement is on the other.)
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 201
+Author: edgars
+Date: 10:27:09 PM, Tuesday, December 01, 2009
+Message:
+Added counter clockwise spiral - Attempt #2. (There may be many attempts as MATLAB is on one computer and Movement is on the other.)
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 200
+Author: edgars
+Date: 10:18:59 PM, Tuesday, December 01, 2009
+Message:
+Added counter clockwise spiral.
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 199
+Author: edgars
+Date: 10:06:24 PM, Tuesday, December 01, 2009
+Message:
+Added the Spiral Test.
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 198
+Author: licataja
+Date: 9:15:44 PM, Tuesday, December 01, 2009
+Message:
+Does multiple statements inside of if or while statement
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+
+Revision: 197
+Author: ellisjc
+Date: 4:56:06 PM, Tuesday, December 01, 2009
+Message:
+Shhh
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 196
+Author: edgars
+Date: 10:43:55 PM, Monday, November 30, 2009
+Message:
+Added a file with the local mode test data instead of hard coding it into the Test.cs file. The Test.cs file was modified to read from this file. It has been tested with a single Script the Triangle Test Script.
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/Test.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/tests.dat
+
+Revision: 195
+Author: edgars
+Date: 8:11:34 PM, Monday, November 30, 2009
+Message:
+Changed the way Update works for Patients. daotest.php still passes. Now you can set the Username and the updated fields and call Update. No longer need to call find before changing the fields and then call Update. Also the RetreiveUserId function was added and made public. This function will get only the idNumber for a user provided the Username field is filled in with a valid username.
+----
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/UserDAO.php
+
+Revision: 194
+Author: egglesjp
+Date: 6:41:14 PM, Monday, November 30, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/admin/clinician_script.php
+
+Revision: 193
+Author: deyosa
+Date: 6:39:19 PM, Monday, November 30, 2009
+Message:
+Some fields update, some fields don't.
+----
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 192
+Author: deyosa
+Date: 6:38:36 PM, Monday, November 30, 2009
+Message:
+New List Patient Format!!
+Links to Update Patient
+----
+Modified : /ee418/source/webui/webui/guis/patients.php
+
+Revision: 191
+Author: egglesjp
+Date: 6:37:43 PM, Monday, November 30, 2009
+Message:
+adding admin pages - login/logout, homepage, add clinician
+----
+Added : /ee418/source/webui/webui/admin/add_clinician.php
+Added : /ee418/source/webui/webui/admin/clinician_script.php
+Added : /ee418/source/webui/webui/admin/homepage.php
+Added : /ee418/source/webui/webui/admin/index.css
+Added : /ee418/source/webui/webui/admin/index.php
+Added : /ee418/source/webui/webui/admin/login.php
+Added : /ee418/source/webui/webui/admin/logout.php
+Added : /ee418/source/webui/webui/admin/styles.css
+
+Revision: 190
+Author: deyosa
+Date: 5:40:03 PM, Monday, November 30, 2009
+Message:
+Perfected Add and Update Patient
+Added in error handling for blank fields and 
+previously existing usernames.
+----
+Added : /ee418/source/webui/webui/admin
+Modified : /ee418/source/webui/webui/guis/add_patient.php
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/login.php
+Modified : /ee418/source/webui/webui/guis/patient_script.php
+Modified : /ee418/source/webui/webui/guis/patient_update_script.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 185
+Author: edgars
+Date: 5:57:57 PM, Sunday, November 29, 2009
+Message:
+Added a Local Mode for practice tests. Currently the Triangle test is the only test available in Local Mode and it is hard coded into the application. (Note: Instead of hard coding move the test data to a flat file which can be loaded.)
+----
+Modified : /ee418/source/MOVEMENT/Client/Movement/Movement.Designer.cs
+Modified : /ee418/source/MOVEMENT/Client/Movement/Movement.cs
+Modified : /ee418/source/MOVEMENT/Client/Movement/Movement.csproj
+Modified : /ee418/source/MOVEMENT/Client/Movement/Test.cs
+
+Revision: 184
+Author: edgars
+Date: 3:46:40 PM, Sunday, November 29, 2009
+Message:
+Initial add of MOVEMENT projects. The bin and obj directories for each were not added. The suo file for each project was not added.
+----
+Added : /ee418/source/MOVEMENT/Analysis
+Added : /ee418/source/MOVEMENT/Analysis/Analysis.cs
+Added : /ee418/source/MOVEMENT/Analysis/Analyzer.cs
+Added : /ee418/source/MOVEMENT/Analysis/AnalyzerHelpers.cs
+Added : /ee418/source/MOVEMENT/Analysis/Graphing
+Added : /ee418/source/MOVEMENT/Analysis/Graphing/SamplePlot.Designer.cs
+Added : /ee418/source/MOVEMENT/Analysis/Graphing/SamplePlot.cs
+Added : /ee418/source/MOVEMENT/Analysis/Graphing/SamplePlot.resx
+Added : /ee418/source/MOVEMENT/Analysis/Movement.Analysis.csproj
+Added : /ee418/source/MOVEMENT/Analysis/Properties
+Added : /ee418/source/MOVEMENT/Analysis/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/AnalysisDisplayControl.Designer.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/AnalysisDisplayControl.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/AnalysisDisplayControl.resx
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/AnalysisPlot.Designer.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/AnalysisPlot.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/Movement.Analysis.Graphing.csproj
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/Properties
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/SamplePlot.Designer.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/SamplePlot.cs
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/SamplePlot.resx
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/ZedGraph.dll
+Added : /ee418/source/MOVEMENT/Analysis.Graphing/ZedGraph.xml
+Added : /ee418/source/MOVEMENT/Client
+Added : /ee418/source/MOVEMENT/Client/Ankh.NoLoad
+Added : /ee418/source/MOVEMENT/Client/Movement
+Added : /ee418/source/MOVEMENT/Client/Movement/About.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/About.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/About.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/Connection.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Movement.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Movement.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Movement.csproj
+Added : /ee418/source/MOVEMENT/Client/Movement/Movement.ico
+Added : /ee418/source/MOVEMENT/Client/Movement/Movement.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/Patient.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/PatientNotes.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/PatientNotes.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/PatientNotes.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/Program.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties/Resources.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties/Resources.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties/Settings.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Properties/Settings.settings
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/Information64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/Thumbs.db
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/add_patient.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/add_patient32.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/arrow.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/arrow_gray.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/blank.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/btn_add_test.Image.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/btn_move_test_down.Image.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/btn_move_test_up.Image.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/btn_remove_test.Image.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/file-manager.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/history32.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/movement32.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/movement64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/newUser64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/ok.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/retrieve_patient.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/settings64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/testBatch32.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/testBatch64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/totem copy.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/user.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Resources/user64.png
+Added : /ee418/source/MOVEMENT/Client/Movement/Settings.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Task.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TaskList.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Test.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPatient.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPatient.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPatient.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPreview.Designer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPreview.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/TestPreview.resx
+Added : /ee418/source/MOVEMENT/Client/Movement/User.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Batch1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Data.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Notes1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/PatientObject1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Reference.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Reference.map
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Script1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/ScriptInfo1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Service.disco
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Service.wsdl
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/Test1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/Web References/movement_web_service/UserObject1.datasource
+Added : /ee418/source/MOVEMENT/Client/Movement/WebServicer.cs
+Added : /ee418/source/MOVEMENT/Client/Movement/app.config
+Added : /ee418/source/MOVEMENT/Client/Movement.sln
+Added : /ee418/source/MOVEMENT/Database
+Added : /ee418/source/MOVEMENT/Database/Interface
+Added : /ee418/source/MOVEMENT/Database/Interface/DBObject.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/Movement.Database.csproj
+Added : /ee418/source/MOVEMENT/Database/Interface/NormativeAnalysis.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/Note.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/Patient.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/Properties
+Added : /ee418/source/MOVEMENT/Database/Interface/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/RecordNotFoundException.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/Test.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/TestAnalysis.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/TestBatch.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/TestScript.cs
+Added : /ee418/source/MOVEMENT/Database/Interface/User.cs
+Added : /ee418/source/MOVEMENT/Database/Structure
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.ADD_TEST_ANALYSIS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.ADD_TEST_BATCH_TEST.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.ADD_TEST_SAMPLE.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.CHANGE_PASSWORD.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.CREATE_CLINICIAN.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.CREATE_PATIENT.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.CREATE_TEST_BATCH.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.FIND_PATIENT_BY_DOB.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.FIND_PATIENT_BY_NAME.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.FIND_PATIENT_BY_NAME_SSN_DOB.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.FIND_PATIENT_BY_SSN.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.FIND_PATIENT_BY_SSN_DOB.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_ALL_TESTS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_ALL_TEST_BATCHES.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_ALL_TEST_SCRIPT_TYPES.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_CURRENT_TEST_SCRIPT.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_LAST_TEST.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_LOGIN.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_NORMATIVE_ANALYSIS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_PATIENT.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_PATIENT_NOTES.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_POPULATION_DATA.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_ANALYSIS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_BATCH.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_NOTES.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_SAMPLES.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_SCRIPT.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_TEST_SCRIPT_TYPE.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.GET_USER.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.LOG_QUERY.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.REMOVE_CLINICIAN.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.REMOVE_PATIENT.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.REMOVE_TEST_BATCH.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.REMOVE_TEST_BATCH_TESTS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.SET_CLINICIAN_FULL_NAME.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.SET_CLINICIAN_INFO.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.SET_PATIENT_ADDRESS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.SET_PATIENT_FULL_NAME.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.SET_PATIENT_INFO.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.STORE_PATIENT_NOTE.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.STORE_TEST_NOTE.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.STORE_TEST_RESULTS.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.fn_diagramobjects.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.metric.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.metric_field.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.normative_analysis.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.patient.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.patient_note.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.patient_subject.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.patient_subject_join.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.query_log.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.raw_test_data.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_alterdiagram.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_creatediagram.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_dropdiagram.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_helpdiagramdefinition.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_helpdiagrams.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_renamediagram.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sp_upgraddiagrams.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.subject.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.sysdiagrams.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_analysis.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_batch.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_batch_tests.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_note.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_script.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.test_script_type.sql
+Added : /ee418/source/MOVEMENT/Database/Structure/dbo.user.sql
+Added : /ee418/source/MOVEMENT/Scripting
+Added : /ee418/source/MOVEMENT/Scripting/InkPressureFeedbackMode.cs
+Added : /ee418/source/MOVEMENT/Scripting/Movement.Scripting.csproj
+Added : /ee418/source/MOVEMENT/Scripting/Properties
+Added : /ee418/source/MOVEMENT/Scripting/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/Scripting/ScriptEngine.cs
+Added : /ee418/source/MOVEMENT/Server
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/PrecompiledApp.config
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/Service.asmx
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/Web.Config
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/App_Code.compiled
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/App_Code.dll
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Analysis.dll
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Analysis.pdb
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Analysis.xml
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Database.XML
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Database.dll
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Database.dll.config
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Database.pdb
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Scripting.dll
+Added : /ee418/source/MOVEMENT/Server/PrecompiledWeb/Web/bin/Movement.Scripting.pdb
+Added : /ee418/source/MOVEMENT/Server/Server.sln
+Added : /ee418/source/MOVEMENT/Server/Web
+Added : /ee418/source/MOVEMENT/Server/Web/App_Code
+Added : /ee418/source/MOVEMENT/Server/Web/App_Code/Service.cs
+Added : /ee418/source/MOVEMENT/Server/Web/App_Data
+Added : /ee418/source/MOVEMENT/Server/Web/Service.asmx
+Added : /ee418/source/MOVEMENT/Server/Web/Web.Config
+Added : /ee418/source/MOVEMENT/TestEngine
+Added : /ee418/source/MOVEMENT/TestEngine/Capture
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/CalibratedInkSample.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/Calibration
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/Calibration/CenteredInkCalibration.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/Calibration/InkCalibration.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/Calibration/PressureInkCalibration.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/HighResTimer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/InkDataCapture.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/InkInputControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/InkInputControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/InkInputControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Capture/RawInkSample.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display
+Added : /ee418/source/MOVEMENT/TestEngine/Display/InkAnimator.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/InkOutputControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/InkOutputControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/InkOutputControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PipedInkOutputControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PipedInkOutputControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PlaybackControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PlaybackControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PlaybackControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Display/PressurePen.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/ReplayInkOutputControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/ReplayInkOutputControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Display/ReplayInkOutputControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Movement.TestEngine.csproj
+Added : /ee418/source/MOVEMENT/TestEngine/Properties
+Added : /ee418/source/MOVEMENT/TestEngine/Properties/AssemblyInfo.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Properties/Icons.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Properties/Icons.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Resources
+Added : /ee418/source/MOVEMENT/TestEngine/Resources/tablet-cognitive.png
+Added : /ee418/source/MOVEMENT/TestEngine/Resources/tablet-direct.png
+Added : /ee418/source/MOVEMENT/TestEngine/Testing
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/CognitiveMapControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/CognitiveMapControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/CognitiveMapForm.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/CognitiveMapForm.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/CognitiveMapForm.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestBatchCaptureControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestBatchCaptureControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestBatchCaptureControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestCaptureControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestCaptureControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestCaptureControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestReplayControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestReplayControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestReplayControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestScript.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestScriptPreviewControl.Designer.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestScriptPreviewControl.cs
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestScriptPreviewControl.resx
+Added : /ee418/source/MOVEMENT/TestEngine/Testing/TestScriptRenderer.cs
+
+Revision: 183
+Author: edgars
+Date: 3:37:34 PM, Sunday, November 29, 2009
+Message:
+Adding the MOVEMENT project.
+----
+Added : /ee418/source/MOVEMENT
+
+Revision: 182
+Author: ellisjc
+Date: 9:08:14 PM, Friday, November 27, 2009
+Message:
+Again totally not a project for another class.
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 181
+Author: ellisjc
+Date: 12:17:55 PM, Tuesday, November 24, 2009
+Message:
+Totally nor a handy place to store a project from another class.
+----
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Modified : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Modified : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 180
+Author: edgars
+Date: 9:40:34 AM, Sunday, November 22, 2009
+Message:
+The PDA can talk to the Wii-Remote through the laptop.
+
+The activator project is necessary to activate and deactivate the WWM driver. 
+
+The WiiMote_PDA_COM project runs on the laptop and passes incoming Wii-Remote data to the PDA over Bluetooth SPP.
+
+The wiiwm_driver had the seek and deviceioctrl functions uncommented in order to support .net FileStream class.
+----
+Added : /ee418/source/WWM_Activator
+Added : /ee418/source/WWM_Activator/WWM_Activator
+Added : /ee418/source/WWM_Activator/WWM_Activator/ReadMe.txt
+Added : /ee418/source/WWM_Activator/WWM_Activator/Resourcesp.h
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activator.cpp
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activator.h
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activator.sln
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activator.vcproj
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activator.vcproj.POS.sredgar.user
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_ActivatorDlg.cpp
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_ActivatorDlg.h
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activatorppc.aps
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activatorppc.rc
+Added : /ee418/source/WWM_Activator/WWM_Activator/WWM_Activatorsp.rc
+Added : /ee418/source/WWM_Activator/WWM_Activator/res
+Added : /ee418/source/WWM_Activator/WWM_Activator/res/WWM_Activator.ico
+Added : /ee418/source/WWM_Activator/WWM_Activator/res/WWM_Activatorppc.rc2
+Added : /ee418/source/WWM_Activator/WWM_Activator/res/WWM_Activatorsp.rc2
+Added : /ee418/source/WWM_Activator/WWM_Activator/resourceppc.h
+Added : /ee418/source/WWM_Activator/WWM_Activator/stdafx.cpp
+Added : /ee418/source/WWM_Activator/WWM_Activator/stdafx.h
+Added : /ee418/source/WiiMote_PDA_COM
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiiMoteConnection
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiiMoteConnection/Program.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiiMoteConnection/Properties
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiiMoteConnection/Properties/AssemblyInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiiMoteConnection/WiiMoteConnection.csproj
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/Wiimote.sln
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/DataTypes.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Events.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/HIDImports.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Properties
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Properties/AssemblyInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/Wiimote.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/WiimoteCollection.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/WiimoteLib.csproj
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/AdditionalContent
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/AdditionalContent/changes.topic
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/AdditionalContent/copyright.topic
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/AdditionalContent/license.topic
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/AdditionalContent/overview.topic
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/Help
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/Help/LastBuild.log
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/Help/WiimoteLib.chm
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/WiimoteLib.shfb
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/APIHelp/WiimoteLib.sitemap
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/copyright.txt
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/license.txt
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteLib/docs/readme.txt
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/AssemblyInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Properties
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/AssemblyInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Microsoft.Resources.DssModel.dss
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Properties
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Properties/Resources.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Properties/Resources.resx
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Resources
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Resources/DssModel.dss
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.Proxy.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.Transform.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.proxy.csproj
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.proxy.csproj.bak
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.proxy.csproj.user.bak
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.proxy.sln
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/Wiimote.Y2007.M06.proxy.xml
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/WiimoteLib.Proxy.WiimoteTypes.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Proxy/wiimote.source.transform.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Wiimote.csproj
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Wiimote.csproj.bak
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/Wiimote.manifest.xml
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/WiimoteMSRS.sln
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/WiimoteService.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteMSRS/WiimoteTypes.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/MultipleWiimoteForm.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/MultipleWiimoteForm.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/MultipleWiimoteForm.resx
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Program.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties/AssemblyInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties/Resources.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties/Resources.resx
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties/Settings.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/Properties/Settings.settings
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/SingleWiimoteForm.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/SingleWiimoteForm.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/SingleWiimoteForm.resx
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/WiimoteInfo.Designer.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/WiimoteInfo.cs
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/WiimoteInfo.resx
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/WiimoteCS/WiimoteTest/WiimoteTest.csproj
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/copyright.txt
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/license.txt
+Added : /ee418/source/WiiMote_PDA_COM/WiimoteLib_1.7_src/readme.txt
+Modified : /ee418/source/wiiwm/wiiwm/Wiimote.cs
+Modified : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.cpp
+
+Revision: 179
+Author: edgars
+Date: 2:31:05 PM, Friday, November 20, 2009
+Message:
+Removed old Projects from the PDA. I think i left the most recent project. (We can always bring the old ones back from the SVN graveyard if we have to.)
+----
+Deleted : /ee418/source/pda/BT_treo
+Deleted : /ee418/source/pda/BT_treo.sln
+Deleted : /ee418/source/pda/BT_treo.suo
+Deleted : /ee418/source/pda/PDA
+
+Revision: 178
+Author: edgars
+Date: 2:24:26 PM, Friday, November 20, 2009
+Message:
+Removed un-need Visual Studio file from SVN.
+----
+Deleted : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+
+Revision: 177
+Author: edgars
+Date: 2:20:06 PM, Friday, November 20, 2009
+Message:
+Removed the webui_ssl branch. It is no longer needed because it has been merged into the trunk of the webui project.
+----
+Deleted : /ee418/source/webui_ssl
+
+Revision: 176
+Author: edgars
+Date: 2:18:44 PM, Friday, November 20, 2009
+Message:
+Added the Wii Windows Mobile project which is a C# project for WM6 that is designed to run on a PDA with the wiiwm_driver installed. 
+
+It has been adapted to use a Stream Interface Driver to communicate with the Wiimote over System.IO.FileStream. Functionality for this has been implemented but not formally tested.
+----
+Added : /ee418/source/wiiwm
+Added : /ee418/source/wiiwm/wiiwm
+Added : /ee418/source/wiiwm/wiiwm/DataTypes.cs
+Added : /ee418/source/wiiwm/wiiwm/Events.cs
+Added : /ee418/source/wiiwm/wiiwm/Properties
+Added : /ee418/source/wiiwm/wiiwm/Properties/AssemblyInfo.cs
+Added : /ee418/source/wiiwm/wiiwm/Wiimote.cs
+Added : /ee418/source/wiiwm/wiiwm/WiimoteCollection.cs
+Added : /ee418/source/wiiwm/wiiwm/wiiwm.csproj
+Added : /ee418/source/wiiwm/wiiwm/wiiwm.csproj.user
+Added : /ee418/source/wiiwm/wiiwm.sln
+
+Revision: 175
+Author: edgars
+Date: 2:10:56 PM, Friday, November 20, 2009
+Message:
+Added the wiiwm_driver project. The project is written in C++. This should successfully build a DLL which can be installed on a PDA running Windows Mobile 6. 
+
+Note The PDA's registry must be modified by adding the appropriate keys inorder for the driver to work.
+----
+Added : /ee418/source/wiiwm_driver
+Added : /ee418/source/wiiwm_driver/wiiwm_driver
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/ReadMe.txt
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/stdafx.cpp
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/stdafx.h
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.cpp
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.h
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.vcproj
+Added : /ee418/source/wiiwm_driver/wiiwm_driver/wiiwm_driver.vcproj.POS.sredgar.user
+Added : /ee418/source/wiiwm_driver/wiiwm_driver.sln
+
+Revision: 174
+Author: ellisjc
+Date: 8:57:42 PM, Thursday, November 19, 2009
+Message:
+Fixed ryans errors
+----
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+
+Revision: 173
+Author: edgars
+Date: 8:50:39 PM, Thursday, November 19, 2009
+Message:
+Added the rest of the Server_Connection web services module.
+----
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/ActivityMonitor.disco
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/DailyTask.datasource
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/Reference.cs
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/Reference.map
+
+Revision: 172
+Author: edgars
+Date: 8:30:29 PM, Thursday, November 19, 2009
+Message:
+Added the correct web reference.
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.settings
+Modified : /ee418/source/Laptop_GUI/app.config
+
+Revision: 171
+Author: ellisjc
+Date: 8:27:18 PM, Thursday, November 19, 2009
+Message:
+sdfsdfs
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+
+Revision: 170
+Author: ellisjc
+Date: 8:19:30 PM, Thursday, November 19, 2009
+Message:
+Beareington does not approve of ryans server
+----
+Modified : /ee418/source/Laptop_GUI/DailyTask.cs
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.settings
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Deleted : /ee418/source/Laptop_GUI/Web References/Server_Connection
+Modified : /ee418/source/Laptop_GUI/app.config
+
+Revision: 169
+Author: edgars
+Date: 7:49:31 PM, Thursday, November 19, 2009
+Message:
+Updated the web reference. This broke some stuff that needs to be fixed in the ServerConnection.cs file.
+----
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Modified : /ee418/source/Laptop_GUI/Web References/Server_Connection/Reference.cs
+
+Revision: 168
+Author: edgars
+Date: 7:35:44 PM, Thursday, November 19, 2009
+Message:
+Removed old projects fro the server. They were replaced by the ActivityMonitorService project.
+----
+Modified : /ee418/source/server
+Deleted : /ee418/source/server/Server
+Deleted : /ee418/source/server/Service
+
+Revision: 167
+Author: ellisjc
+Date: 7:34:41 PM, Thursday, November 19, 2009
+Message:
+Made cursors pretty, did some error checking
+----
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Modified : /ee418/source/Laptop_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+
+Revision: 166
+Author: edgars
+Date: 7:33:11 PM, Thursday, November 19, 2009
+Message:
+Added a test project. This will test the basic functionality of the ActivityMonitorService and ActivityMonitorDatabase.
+----
+Added : /ee418/source/server/ActivityMonitorService_Test
+Added : /ee418/source/server/ActivityMonitorService_Test/ActivityMonitorService_Test.csproj
+Added : /ee418/source/server/ActivityMonitorService_Test/ActivityMonitorService_Test.sln
+Added : /ee418/source/server/ActivityMonitorService_Test/Form1.Designer.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Form1.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Form1.resx
+Added : /ee418/source/server/ActivityMonitorService_Test/Program.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties/AssemblyInfo.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties/Resources.Designer.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties/Resources.resx
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties/Settings.Designer.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Properties/Settings.settings
+Added : /ee418/source/server/ActivityMonitorService_Test/Service References
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection/ActivityMonitor.disco
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection/ActivityMonitor.wsdl
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection/DailyTask.datasource
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection/Reference.cs
+Added : /ee418/source/server/ActivityMonitorService_Test/Web References/Server_Connection/Reference.map
+Added : /ee418/source/server/ActivityMonitorService_Test/app.config
+
+Revision: 165
+Author: edgars
+Date: 7:32:06 PM, Thursday, November 19, 2009
+Message:
+removed unneeded files that are automatically generated by Visual Studio.
+----
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/DAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/DailyTaskDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/PatientDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/StatisticsDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/UserDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/WalkingStatsDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/WalkingTaskDAO.cs
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj
+
+Revision: 164
+Author: edgars
+Date: 7:30:24 PM, Thursday, November 19, 2009
+Message:
+Inserted the needed conversion objects and static object funcionality to support an interface with the Laptop/PDA.
+----
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitor.asmx.cs
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitorService.csproj
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitorService.csproj.user
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin/ActivityMonitorService.dll
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin/ActivityMonitorService.pdb
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.csproj.FileListAbsolute.txt
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.dll
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.pdb
+Deleted : /ee418/source/server/ActivityMonitorService/ActivityMonitorService.suo
+
+Revision: 163
+Author: edgars
+Date: 7:28:36 PM, Thursday, November 19, 2009
+Message:
+Correct some type casting. Made cooperate with the ActivityMonitorService project.
+----
+Modified : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/DAO.cs
+Modified : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/DailyTaskDAO.cs
+Modified : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/StatisticsDAO.cs
+Modified : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/UserDAO.cs
+
+Revision: 162
+Author: ellisjc
+Date: 7:09:12 PM, Thursday, November 19, 2009
+Message:
+Added previous stats functionality..
+
+Respectfully Yours,
+Dr. Bearrington
+----
+Modified : /ee418/source/Laptop_GUI/AlertGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/AlertGUI.cs
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+
+Revision: 161
+Author: ellisjc
+Date: 6:33:27 PM, Thursday, November 19, 2009
+Message:
+Fix the server damnit!
+-Dr. Bearrington
+----
+Modified : /ee418/source/Laptop_GUI/AlertGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/AlertGUI.cs
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+
+Revision: 160
+Author: ellisjc
+Date: 5:08:35 PM, Thursday, November 19, 2009
+Message:
+Username and password are dynamic
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+
+Revision: 159
+Author: ellisjc
+Date: 4:49:05 PM, Thursday, November 19, 2009
+Message:
+Steps thang
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 158
+Author: ellisjc
+Date: 4:40:05 PM, Thursday, November 19, 2009
+Message:
+Text color and less fudge
+----
+Modified : /ee418/source/Laptop_GUI/AlertGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/AlertGUI.cs
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+
+Revision: 157
+Author: ellisjc
+Date: 4:03:29 PM, Thursday, November 19, 2009
+Message:
+Clinician gui saves stc stuff
+----
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Added : /ee418/source/Laptop_GUI/ConfigFile.cs
+Added : /ee418/source/Laptop_GUI/DrBearington.gif
+Deleted : /ee418/source/Laptop_GUI/DrBearington.jpg
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Resources.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Resources.resx
+
+Revision: 156
+Author: edgars
+Date: 2:29:37 PM, Thursday, November 19, 2009
+Message:
+Modified Statistics creation module for long term storage.  Also added a StepOccurred Event handler in the WiiRemoteData object that when a Step occurs this event will be triggered.
+----
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 155
+Author: ellisjc
+Date: 1:53:52 PM, Thursday, November 19, 2009
+Message:
+Dr Bearington added. Boo ya.
+----
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.Designer.cs
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Added : /ee418/source/Laptop_GUI/DrBearington.jpg
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.resx
+Modified : /ee418/source/Laptop_GUI/Properties/Resources.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Resources.resx
+
+Revision: 154
+Author: ellisjc
+Date: 1:20:59 PM, Thursday, November 19, 2009
+Message:
+Alert done, works for wiimote connection not being found.
+----
+Added : /ee418/source/Laptop_GUI/Alert.cs
+Added : /ee418/source/Laptop_GUI/AlertGUI.Designer.cs
+Added : /ee418/source/Laptop_GUI/AlertGUI.cs
+Added : /ee418/source/Laptop_GUI/AlertGUI.resx
+Modified : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Added : /ee418/source/Laptop_GUI/Laptop_Alert.cs
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+Added : /ee418/source/Laptop_GUI/Wii_Alert.cs
+
+Revision: 153
+Author: licataja
+Date: 11:15:07 PM, Wednesday, November 18, 2009
+Message:
+Made basis for ClinicianGUI, now just need to integrate more with the system. File IO working just need to lock down file contents.
+
+-Jim
+----
+Added : /ee418/source/Laptop_GUI/ClinicianGUI.Designer.cs
+Added : /ee418/source/Laptop_GUI/ClinicianGUI.cs
+Added : /ee418/source/Laptop_GUI/ClinicianGUI.resx
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+
+Revision: 152
+Author: edgars
+Date: 10:12:34 PM, Wednesday, November 18, 2009
+Message:
+Add a new Database project. This may work, it has not been tested. It uses a DLL and does not include the classes originally used by the Server to communicate over webservices.
+----
+Added : /ee418/source/database/ActivityMonitorDatabase
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/ActivityMonitorDatabase.csproj
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/App.config
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/DAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/DailyTaskDAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/Properties
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/Properties/AssemblyInfo.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/StatisticsDAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/UserDAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/WalkingStatsDAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase/WalkingTaskDAO.cs
+Added : /ee418/source/database/ActivityMonitorDatabase/ActivityMonitorDatabase.sln
+
+Revision: 151
+Author: ellisjc
+Date: 8:18:26 PM, Wednesday, November 18, 2009
+Message:
+
+----
+Added : /ee418/documentation/wii_data_processing/C-
+Added : /ee418/documentation/wii_data_processing/C-/C-
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/C-.vcproj
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/C-.vcproj.ITL-17.csguest.user
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/C-.vcproj.Jellis-PC.Jellis.user
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/BuildLog.htm
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/C-.exe.embed.manifest
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/C-.exe.embed.manifest.res
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/C-.exe.intermediate.manifest
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/main.obj
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/mt.dep
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.idb
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/Debug/vc90.pdb
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-/main.cpp
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-.ncb
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-.sln
+Added : /ee418/documentation/wii_data_processing/C-/C-/C-.suo
+Added : /ee418/documentation/wii_data_processing/C-/C-/Debug
+Added : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.exe
+Added : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.ilk
+Added : /ee418/documentation/wii_data_processing/C-/C-/Debug/C-.pdb
+
+Revision: 150
+Author: licataja
+Date: 1:54:06 PM, Wednesday, November 18, 2009
+Message:
+Tested creating/reading from config file. It works. Now have to tie in with GUI and reading into ServerConnection object
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+
+Revision: 149
+Author: licataja
+Date: 10:33:59 PM, Monday, November 16, 2009
+Message:
+Heading towards using the file input/output config for ClinicianGUI.
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+
+Revision: 148
+Author: ellisjc
+Date: 12:46:58 PM, Sunday, November 15, 2009
+Message:
+More understandable, less cursing.
+----
+Modified : /ee418/source/Laptop_GUI/DailyTasks.cs
+Deleted : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 147
+Author: edgars
+Date: 12:38:58 PM, Sunday, November 15, 2009
+Message:
+Turned Debug mode off in the DAOs.
+----
+Modified : /ee418/source/webui/webui/daos/db_config.php
+
+Revision: 146
+Author: edgars
+Date: 12:35:44 PM, Sunday, November 15, 2009
+Message:
+Merged the Phase II DAOs which support SSL and use pretty code into the main project. SSL is currently set to disabled. There were minor revisions in how to list patients and how to list daily tasks.
+
+To include all the daos for use in a page simply require_once("daos/db_include.php");
+----
+Modified : /ee418/source/webui/webui
+Modified : /ee418/source/webui/webui/daos/DAO.php
+Modified : /ee418/source/webui/webui/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/UserDAO.php
+Modified : /ee418/source/webui/webui/daos/WalkingTaskDAO.php
+Added : /ee418/source/webui/webui/daos/db_config.php (Copy from path: /ee418/source/webui_ssl/daos/db_config.php, Revision, 145)
+Added : /ee418/source/webui/webui/daos/db_include.php (Copy from path: /ee418/source/webui_ssl/daos/db_include.php, Revision, 145)
+Added : /ee418/source/webui/webui/daos/db_queries.php (Copy from path: /ee418/source/webui_ssl/daos/db_queries.php, Revision, 145)
+Modified : /ee418/source/webui/webui/daotest.php
+
+Revision: 145
+Author: edgars
+Date: 12:30:23 PM, Sunday, November 15, 2009
+Message:
+Merged with WebUI project to resolve differences before recombining with the webUI project.
+----
+Modified : /ee418/source/webui_ssl
+Modified : /ee418/source/webui_ssl/daotest.php
+Added : /ee418/source/webui_ssl/guis/add_patient.php (Copy from path: /ee418/source/webui/webui/guis/add_patient.php, Revision, 144)
+Modified : /ee418/source/webui_ssl/guis/homepage.php
+Modified : /ee418/source/webui_ssl/guis/index.css
+Modified : /ee418/source/webui_ssl/guis/index.php
+Modified : /ee418/source/webui_ssl/guis/login.php
+Added : /ee418/source/webui_ssl/guis/logout.php (Copy from path: /ee418/source/webui/webui/guis/logout.php, Revision, 144)
+Added : /ee418/source/webui_ssl/guis/patient_script.php (Copy from path: /ee418/source/webui/webui/guis/patient_script.php, Revision, 144)
+Added : /ee418/source/webui_ssl/guis/patient_update_script.php (Copy from path: /ee418/source/webui/webui/guis/patient_update_script.php, Revision, 144)
+Added : /ee418/source/webui_ssl/guis/patients.php (Copy from path: /ee418/source/webui/webui/guis/patients.php, Revision, 144)
+Modified : /ee418/source/webui_ssl/guis/styles.css
+Added : /ee418/source/webui_ssl/guis/update_patient.php (Copy from path: /ee418/source/webui/webui/guis/update_patient.php, Revision, 144)
+Added : /ee418/source/webui_ssl/scripts (Copy from path: /ee418/source/webui/webui/scripts, Revision, 144)
+
+Revision: 144
+Author: deyosa
+Date: 10:02:04 AM, Friday, November 13, 2009
+Message:
+Sortable Javascript.
+----
+Added : /ee418/source/webui/webui/scripts
+Added : /ee418/source/webui/webui/scripts/sorttable.js
+
+Revision: 143
+Author: ellisjc
+Date: 9:24:48 PM, Thursday, November 12, 2009
+Message:
+fudging A it works
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+
+Revision: 142
+Author: hadleymj
+Date: 9:11:57 PM, Thursday, November 12, 2009
+Message:
+PDA Connection and Server Connection Web Service Implementation. Booya
+----
+Modified : /ee418/source/Laptop_GUI/ActivityMonitorService.dll
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/Program.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Properties/Settings.settings
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Added : /ee418/source/Laptop_GUI/Service References
+Modified : /ee418/source/Laptop_GUI/WalkingStats.cs
+Added : /ee418/source/Laptop_GUI/Web References
+Added : /ee418/source/Laptop_GUI/Web References/Activity_Monitor
+Added : /ee418/source/Laptop_GUI/Web References/Activity_Monitor/Reference.cs
+Added : /ee418/source/Laptop_GUI/Web References/Activity_Monitor/Reference.map
+Added : /ee418/source/Laptop_GUI/Web References/Activity_Monitor/Service.disco
+Added : /ee418/source/Laptop_GUI/Web References/Activity_Monitor/Service.wsdl
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/ActivityMonitor.disco
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/ActivityMonitor.wsdl
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/DailyTask.datasource
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/Reference.cs
+Added : /ee418/source/Laptop_GUI/Web References/Server_Connection/Reference.map
+Added : /ee418/source/Laptop_GUI/Web References/localhost
+Added : /ee418/source/Laptop_GUI/Web References/localhost/Reference.cs
+Added : /ee418/source/Laptop_GUI/Web References/localhost/Reference.map
+Added : /ee418/source/Laptop_GUI/Web References/localhost/Service.disco
+Added : /ee418/source/Laptop_GUI/Web References/localhost/Service.wsdl
+Added : /ee418/source/Laptop_GUI/app.config
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitor.asmx.cs
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/DAO.cs
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/StatisticsDAO.cs
+Modified : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/WalkingTaskDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin/ActivityMonitorService.dll
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/bin/ActivityMonitorService.pdb
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.csproj.FileListAbsolute.txt
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.dll
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/ActivityMonitorService.pdb
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/obj/Debug/TempPE
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService.suo
+Added : /ee418/source/server/Server/Server.suo
+Modified : /ee418/source/server/Service/Service/Service/bin/Service.dll
+
+Revision: 141
+Author: ellisjc
+Date: 9:00:37 PM, Thursday, November 12, 2009
+Message:
+Quit works.
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 140
+Author: licataja
+Date: 8:45:55 PM, Thursday, November 12, 2009
+Message:
+Fixed the live stats screen.
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 139
+Author: egglesjp
+Date: 8:26:54 PM, Thursday, November 12, 2009
+Message:
+fixed scripts - adds patient to database.
+----
+Modified : /ee418/source/webui/webui/guis/patient_script.php
+Modified : /ee418/source/webui/webui/guis/patient_update_script.php
+
+Revision: 138
+Author: egglesjp
+Date: 8:05:01 PM, Thursday, November 12, 2009
+Message:
+add and update patient forms with their post scripts and redirects.
+----
+Modified : /ee418/source/webui/webui/guis/add_patient.php
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/login.php
+Added : /ee418/source/webui/webui/guis/patient_script.php
+Added : /ee418/source/webui/webui/guis/patient_update_script.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+Modified : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 137
+Author: licataja
+Date: 8:02:29 PM, Thursday, November 12, 2009
+Message:
+BadIdea is awesome hells yea
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.resx
+
+Revision: 136
+Author: deyosa
+Date: 7:50:19 PM, Thursday, November 12, 2009
+Message:
+Fixed error CSS.
+----
+Modified : /ee418/source/webui/webui/guis/index.css
+
+Revision: 135
+Author: deyosa
+Date: 7:41:39 PM, Thursday, November 12, 2009
+Message:
+Patients Done! With Sorting Table!
+----
+Modified : /ee418/source/webui/webui/guis/patients.php
+
+Revision: 134
+Author: finlayjt
+Date: 7:22:14 PM, Thursday, November 12, 2009
+Message:
+
+----
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+
+Revision: 133
+Author: finlayjt
+Date: 6:51:13 PM, Thursday, November 12, 2009
+Message:
+WebServices without some of the socket testing
+----
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+
+Revision: 132
+Author: deyosa
+Date: 6:30:50 PM, Thursday, November 12, 2009
+Message:
+Patients in semi working order, before I screw it up.
+----
+Modified : /ee418/source/webui/webui/guis/patients.php
+
+Revision: 131
+Author: edgars
+Date: 5:27:25 PM, Thursday, November 12, 2009
+Message:
+Add of new web services project. This provides GetTasks and UploadStats.
+----
+Added : /ee418/source/server/ActivityMonitorService
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitor.asmx
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitor.asmx.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitorService.csproj
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/ActivityMonitorService.csproj.user
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/App_Data
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/DAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/DailyTaskDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/PatientDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/Properties
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/Properties/AssemblyInfo.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/StatisticsDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/UserDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/WalkingStatsDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/WalkingTaskDAO.cs
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService/Web.config
+Added : /ee418/source/server/ActivityMonitorService/ActivityMonitorService.sln
+
+Revision: 130
+Author: egglesjp
+Date: 5:27:03 PM, Thursday, November 12, 2009
+Message:
+Added pages: update patient, add patient.
+----
+Added : /ee418/source/webui/webui/guis/add_patient.php
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/patients.php
+Added : /ee418/source/webui/webui/guis/update_patient.php
+
+Revision: 129
+Author: ellisjc
+Date: 5:18:40 PM, Thursday, November 12, 2009
+Message:
+wE ARE AWESOME.
+----
+Added : /ee418/source/Laptop_GUI/Laptop_GUI.suo (Copy from path: /ee418/source/Laptop_GUI/Laptop_GUI.suo, Revision, 120)
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+
+Revision: 128
+Author: edgars
+Date: 5:11:19 PM, Thursday, November 12, 2009
+Message:
+Added the dll needed for web services.
+----
+Added : /ee418/source/Laptop_GUI/ActivityMonitorService.dll
+Modified : /ee418/source/Laptop_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/Laptop_GUI/DailyTasks.cs
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+
+Revision: 127
+Author: hadleymj
+Date: 3:18:52 PM, Thursday, November 12, 2009
+Message:
+Service project now exposes the appropriate methods
+----
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx
+Modified : /ee418/source/server/Service/Service/Service/bin/Service.dll
+
+Revision: 126
+Author: edgars
+Date: 3:00:11 PM, Thursday, November 12, 2009
+Message:
+Mid progress update for WiiRemoteConnection and adding threads to WiiRemoteData.
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+
+Revision: 125
+Author: ellisjc
+Date: 2:12:09 PM, Thursday, November 12, 2009
+Message:
+Connection stuff again
+----
+Modified : /ee418/source/Laptop_GUI/Connection.cs
+Modified : /ee418/source/Laptop_GUI/ServerConnection.cs
+
+Revision: 124
+Author: edgars
+Date: 2:03:23 PM, Thursday, November 12, 2009
+Message:
+John temporarily patched the getStats method.
+----
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+
+Revision: 123
+Author: edgars
+Date: 2:01:55 PM, Thursday, November 12, 2009
+Message:
+Added WiimoteLib.dll as a Reference in the project to provide access to the WiiRemote. Implemented WiiRemoteConnection object which will hold the accelerometer samples until they are needed for processing.
+----
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/RawData.cs
+Modified : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+Added : /ee418/source/Laptop_GUI/WiimoteLib.dll
+
+Revision: 122
+Author: ellisjc
+Date: 1:54:03 PM, Thursday, November 12, 2009
+Message:
+Connection stuff.
+----
+Added : /ee418/source/Laptop_GUI/Connection.cs
+Added : /ee418/source/Laptop_GUI/ServerConnection.cs
+
+Revision: 121
+Author: edgars
+Date: 12:45:42 PM, Thursday, November 12, 2009
+Message:
+Cleaned up the unnecessary files that are built automatically by Visual Studio.
+----
+Modified : /ee418/source/Laptop_GUI
+Deleted : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Deleted : /ee418/source/Laptop_GUI/bin
+Deleted : /ee418/source/Laptop_GUI/obj
+
+Revision: 120
+Author: edgars
+Date: 12:09:07 PM, Thursday, November 12, 2009
+Message:
+Updated the rest of the daos to utilize the db_* files. Also the ListPatients function was moved to UserDAO and the ListDailyTasks was moved to PatientDAO.
+----
+Modified : /ee418/source/webui_ssl/daos/DAO.php
+Modified : /ee418/source/webui_ssl/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui_ssl/daos/PatientDAO.php
+Modified : /ee418/source/webui_ssl/daos/UserDAO.php
+Modified : /ee418/source/webui_ssl/daos/WalkingTaskDAO.php
+Modified : /ee418/source/webui_ssl/daotest.php
+
+Revision: 119
+Author: edgars
+Date: 12:08:06 PM, Thursday, November 12, 2009
+Message:
+Added configuration, include, and static queries files. To configure the database connection string use the settings in db_config.php.
+----
+Added : /ee418/source/webui_ssl/daos/db_config.php
+Added : /ee418/source/webui_ssl/daos/db_include.php
+Added : /ee418/source/webui_ssl/daos/db_queries.php
+
+Revision: 118
+Author: deyosa
+Date: 12:04:41 PM, Thursday, November 12, 2009
+Message:
+Patients can no longer login. Only Clinicians can now.
+----
+Modified : /ee418/source/webui/webui/guis/login.php
+
+Revision: 117
+Author: deyosa
+Date: 10:59:54 AM, Thursday, November 12, 2009
+Message:
+Fixed error output bug.
+----
+Modified : /ee418/source/webui/webui/guis/index.php
+Modified : /ee418/source/webui/webui/guis/logout.php
+
+Revision: 116
+Author: licataja
+Date: 10:05:10 PM, Tuesday, November 10, 2009
+Message:
+Added documentation of PDA_GUI
+
+-Jim
+----
+Added : /ee418/documentation/licataja_How the PDA GUI Runs.docx
+
+Revision: 115
+Author: licataja
+Date: 9:52:58 PM, Tuesday, November 10, 2009
+Message:
+Added label that gets loaded with task information...haha unless i did it wrong John
+
+-Jim
+----
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.pdb
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.pdb
+
+Revision: 114
+Author: ellisjc
+Date: 11:21:57 AM, Tuesday, November 10, 2009
+Message:
+Added most of the functionality of the PDA stats into the laptop gui project, does not display yet but that should just be some code uncommented when Jim adds the fields to put them in.  Tasks should also work when a field for them is added.
+----
+Added : /ee418/source/Laptop_GUI/DailyTask.cs
+Modified : /ee418/source/Laptop_GUI/DailyTasks.cs
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Modified : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Modified : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/Laptop_GUI/MainMenu.cs
+Added : /ee418/source/Laptop_GUI/RawData.cs
+Modified : /ee418/source/Laptop_GUI/Statistics.cs
+Added : /ee418/source/Laptop_GUI/Stats.cs
+Added : /ee418/source/Laptop_GUI/WalkingStats.cs
+Added : /ee418/source/Laptop_GUI/WalkingTask.cs
+Added : /ee418/source/Laptop_GUI/WiiRemoteConnection.cs
+Added : /ee418/source/Laptop_GUI/WiiRemoteData.cs
+Modified : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.exe
+Modified : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.pdb
+Modified : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.vshost.exe
+Added : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.vshost.exe.manifest
+Modified : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.csproj.FileListAbsolute.txt
+Modified : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.csproj.GenerateResource.Cache
+Modified : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.exe
+Modified : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.pdb
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.pdb
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.pdb
+
+Revision: 113
+Author: edgars
+Date: 6:37:45 PM, Monday, November 09, 2009
+Message:
+Schedule for phase 1 and the database documentation.
+----
+Added : /ee418/documentation/EE418 - Database Documentation.doc
+Added : /ee418/documentation/Schedule and Unit Test Plan Presentation.ppt
+Added : /ee418/documentation/ws_dao.png
+
+Revision: 112
+Author: licataja
+Date: 1:59:36 PM, Monday, November 09, 2009
+Message:
+Added laptop GUI, need to hook up step processing.
+-Jim
+----
+Added : /ee418/source/Laptop_GUI
+Added : /ee418/source/Laptop_GUI/DailyTasks.Designer.cs
+Added : /ee418/source/Laptop_GUI/DailyTasks.cs
+Added : /ee418/source/Laptop_GUI/DailyTasks.resx
+Added : /ee418/source/Laptop_GUI/Laptop_GUI.csproj
+Added : /ee418/source/Laptop_GUI/Laptop_GUI.csproj.user
+Added : /ee418/source/Laptop_GUI/Laptop_GUI.sln
+Added : /ee418/source/Laptop_GUI/Laptop_GUI.suo
+Added : /ee418/source/Laptop_GUI/MainMenu.Designer.cs
+Added : /ee418/source/Laptop_GUI/MainMenu.cs
+Added : /ee418/source/Laptop_GUI/MainMenu.resx
+Added : /ee418/source/Laptop_GUI/Program.cs
+Added : /ee418/source/Laptop_GUI/Properties
+Added : /ee418/source/Laptop_GUI/Properties/AssemblyInfo.cs
+Added : /ee418/source/Laptop_GUI/Properties/Resources.Designer.cs
+Added : /ee418/source/Laptop_GUI/Properties/Resources.resx
+Added : /ee418/source/Laptop_GUI/Properties/Settings.Designer.cs
+Added : /ee418/source/Laptop_GUI/Properties/Settings.settings
+Added : /ee418/source/Laptop_GUI/Statistics.Designer.cs
+Added : /ee418/source/Laptop_GUI/Statistics.cs
+Added : /ee418/source/Laptop_GUI/Statistics.resx
+Added : /ee418/source/Laptop_GUI/bin
+Added : /ee418/source/Laptop_GUI/bin/Debug
+Added : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.exe
+Added : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.pdb
+Added : /ee418/source/Laptop_GUI/bin/Debug/Laptop_GUI.vshost.exe
+Added : /ee418/source/Laptop_GUI/bin/Release
+Added : /ee418/source/Laptop_GUI/obj
+Added : /ee418/source/Laptop_GUI/obj/Debug
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.DailyTasks.resources
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.MainMenu.resources
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.Properties.Resources.resources
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.Statistics.resources
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.csproj.FileListAbsolute.txt
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.csproj.GenerateResource.Cache
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.exe
+Added : /ee418/source/Laptop_GUI/obj/Debug/Laptop_GUI.pdb
+Added : /ee418/source/Laptop_GUI/obj/Debug/Refactor
+Added : /ee418/source/Laptop_GUI/obj/Debug/TempPE
+Added : /ee418/source/Laptop_GUI/obj/Release
+
+Revision: 111
+Author: ellisjc
+Date: 1:29:34 PM, Monday, November 09, 2009
+Message:
+Added the how this works thing that I sent to conry.
+----
+Added : /ee418/documentation/JellisStepAnalysisWriteup.doc
+
+Revision: 110
+Author: deyosa
+Date: 8:43:47 PM, Sunday, November 08, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/logout.php
+
+Revision: 109
+Author: deyosa
+Date: 8:43:35 PM, Sunday, November 08, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 108
+Author: egglesjp
+Date: 8:16:14 PM, Sunday, November 08, 2009
+Message:
+Page for listing patients.
+----
+Added : /ee418/source/webui/webui/guis/patients.php
+
+Revision: 107
+Author: deyosa
+Date: 8:03:59 PM, Sunday, November 08, 2009
+Message:
+Added Sessions; Completed login Functionality; Added error messages;
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/index.css
+Modified : /ee418/source/webui/webui/guis/index.php
+Modified : /ee418/source/webui/webui/guis/login.php
+Added : /ee418/source/webui/webui/guis/logout.php
+
+Revision: 106
+Author: egglesjp
+Date: 7:54:01 PM, Sunday, November 08, 2009
+Message:
+homepage.php - added links to left column, alignments. styles.css - minor edits in pixel values.
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 105
+Author: deyosa
+Date: 5:44:35 PM, Sunday, November 08, 2009
+Message:
+Updated CSS
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/index.css
+Modified : /ee418/source/webui/webui/guis/index.php
+Modified : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 104
+Author: egglesjp
+Date: 4:30:05 PM, Sunday, November 08, 2009
+Message:
+
+----
+Modified : /ee418/source/webui/webui/daotest.php
+Modified : /ee418/source/webui/webui/guis/index.css
+Modified : /ee418/source/webui/webui/guis/index.php
+
+Revision: 103
+Author: ellisjc
+Date: 2:08:27 PM, Sunday, November 08, 2009
+Message:
+Added the classes DailyTask and WalkingTask.
+----
+Added : /ee418/source/pda/PDA_GUI/DailyTask.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Added : /ee418/source/pda/PDA_GUI/WalkingTask.cs
+
+Revision: 102
+Author: egglesjp
+Date: 10:00:29 PM, Thursday, November 05, 2009
+Message:
+minor changes, fixed require_once path in login.php
+----
+Modified : /ee418/source/webui/webui/guis/homepage.php
+Modified : /ee418/source/webui/webui/guis/login.php
+
+Revision: 101
+Author: finlayjt
+Date: 9:10:52 PM, Thursday, November 05, 2009
+Message:
+
+----
+Added : /ee418/source/server/Service/Service/Service/Service.asmx
+
+Revision: 100
+Author: finlayjt
+Date: 9:10:40 PM, Thursday, November 05, 2009
+Message:
+
+----
+Deleted : /ee418/source/server/Service/Service/Service/Service.asmx
+
+Revision: 99
+Author: finlayjt
+Date: 9:10:27 PM, Thursday, November 05, 2009
+Message:
+
+----
+Added : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+
+Revision: 98
+Author: finlayjt
+Date: 9:10:10 PM, Thursday, November 05, 2009
+Message:
+
+----
+Deleted : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+
+Revision: 97
+Author: edgars
+Date: 11:53:24 AM, Thursday, November 05, 2009
+Message:
+The DAOs now use an SSL connection to the MySQL server. The certs need to be located at C:/newcerts. The daotest.php script ran successfully. 
+
+The major revision was to change from mysql_ functions to odbc_ functions. The MySQL Driver 5.1 needs to be installed on the Server hosting the site for this to work.
+----
+Modified : /ee418/source/webui_ssl/daos/DAO.php
+Modified : /ee418/source/webui_ssl/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui_ssl/daos/PatientDAO.php
+Modified : /ee418/source/webui_ssl/daos/UserDAO.php
+Modified : /ee418/source/webui_ssl/daos/WalkingTaskDAO.php
+Modified : /ee418/source/webui_ssl/daotest.php
+
+Revision: 96
+Author: ellisjc
+Date: 10:45:17 AM, Thursday, November 05, 2009
+Message:
+Changed steps/min because it was steps/sec
+----
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteData.cs
+
+Revision: 95
+Author: edgars
+Date: 10:44:40 AM, Thursday, November 05, 2009
+Message:
+The certs required to setup the MySQL database and the client certs required to connect to it were added. 
+
+The newcerts folder should be placed such that C:/newcerts/ca-cert.pem. This enables the Server DAOs to find the certificates needed to connect to the MySQL server.
+----
+Added : /ee418/source/database/newcerts
+Added : /ee418/source/database/newcerts/.rnd
+Added : /ee418/source/database/newcerts/ca-cert.pem
+Added : /ee418/source/database/newcerts/ca-key.pem
+Added : /ee418/source/database/newcerts/client-cert.pem
+Added : /ee418/source/database/newcerts/client-key.pem
+Added : /ee418/source/database/newcerts/client-req.pem
+Added : /ee418/source/database/newcerts/server-cert.pem
+Added : /ee418/source/database/newcerts/server-key.pem
+Added : /ee418/source/database/newcerts/server-req.pem
+
+Revision: 94
+Author: edgars
+Date: 10:41:52 AM, Thursday, November 05, 2009
+Message:
+Creating a branch for DAOs that use SSL. This requires changing the DAOs to the new Object Oriented MySQL connection setup.
+----
+Added : /ee418/source/webui_ssl (Copy from path: /ee418/source/webui/webui, Revision, 93)
+
+Revision: 93
+Author: ellisjc
+Date: 10:30:46 AM, Thursday, November 05, 2009
+Message:
+Ok so its more or less as legit as it can be without a real WiiRemoteConnection class.  Right now main menu has all the important stuff like the connection and stats queue and the stats menu should have a pointer to use getters and setters in order to do things properly.
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/Program.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/Stats.cs
+Modified : /ee418/source/pda/PDA_GUI/WalkingStats.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteData.cs
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/ResolveAssemblyReference.cache
+
+Revision: 92
+Author: licataja
+Date: 6:31:54 PM, Wednesday, November 04, 2009
+Message:
+Fixed PDA_GUI to run in real time....somewhat.
+----
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.pdb
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.FileListAbsolute.txt
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.pdb
+
+Revision: 91
+Author: deyosa
+Date: 2:08:04 AM, Wednesday, November 04, 2009
+Message:
+webui stepstone1
+----
+Added : /ee418/source/webui/webui/guis/homepage.php
+Added : /ee418/source/webui/webui/guis/index.css
+Added : /ee418/source/webui/webui/guis/index.php
+Modified : /ee418/source/webui/webui/guis/login.php
+Added : /ee418/source/webui/webui/guis/styles.css
+
+Revision: 90
+Author: deyosa
+Date: 12:59:14 AM, Wednesday, November 04, 2009
+Message:
+test commit
+----
+Added : /ee418/source/webui/webui/guis
+Added : /ee418/source/webui/webui/guis/login.php
+
+Revision: 89
+Author: ellisjc
+Date: 11:49:52 PM, Tuesday, November 03, 2009
+Message:
+Works now, the connection is just some sample data put into a fake constructor for connection.
+
+Right now step detection works(ish) only adding a new stat object every 10 steps.(by time is not working)
+----
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+Modified : /ee418/source/pda/PDA_GUI/WiiRemoteData.cs
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.pdb
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.FileListAbsolute.txt
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.exe
+Modified : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.pdb
+
+Revision: 88
+Author: edgars
+Date: 11:38:58 PM, Tuesday, November 03, 2009
+Message:
+Implemented the task DAOs. Also update the test script to include tests for the task DAOs. The DAOs are operational to the most minimal extent.
+----
+Modified : /ee418/source/webui/webui/daos/DailyTaskDAO.php
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/WalkingTaskDAO.php
+Modified : /ee418/source/webui/webui/daotest.php
+
+Revision: 87
+Author: edgars
+Date: 10:10:52 PM, Tuesday, November 03, 2009
+Message:
+Added an overloaded method for GetActiveTasks. The new method takes only a idNumber for a patient record in the database.
+----
+Modified : /ee418/source/server/Service/Service/Service/DailyTaskDAO.cs
+
+Revision: 86
+Author: ellisjc
+Date: 9:53:08 PM, Tuesday, November 03, 2009
+Message:
+PDA_GUI totally working...
+----
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App.suo
+Added : /ee418/source/pda/PDA_GUI/51steps.txt
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/Program.cs
+Added : /ee418/source/pda/PDA_GUI/RawData.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+Added : /ee418/source/pda/PDA_GUI/Stats.cs
+Added : /ee418/source/pda/PDA_GUI/WalkingStats.cs
+Added : /ee418/source/pda/PDA_GUI/WiiRemoteConnection.cs
+Added : /ee418/source/pda/PDA_GUI/WiiRemoteData.cs
+Added : /ee418/source/pda/PDA_GUI/bin/Debug/51steps.txt
+Added : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.exe
+Added : /ee418/source/pda/PDA_GUI/bin/Debug/PDA_GUI.pdb
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.DailyTasks.resources
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.MainMenu.resources
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.Properties.Resources.resources
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.Statistics.resources
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.FileListAbsolute.txt
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.csproj.GenerateResource.Cache
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.exe
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/PDA_GUI.pdb
+
+Revision: 85
+Author: edgars
+Date: 8:54:31 PM, Tuesday, November 03, 2009
+Message:
+Implemented the PatientDAO method stubs. Updated the test script to test the newly implemented functionality.
+----
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/UserDAO.php
+Modified : /ee418/source/webui/webui/daotest.php
+
+Revision: 84
+Author: edgars
+Date: 8:12:45 PM, Tuesday, November 03, 2009
+Message:
+A test script was added (daotest.php). Also the UserDAO was completed and passes the test script. Note: ListPatients($clinician) was moved to the PatientDAO.
+----
+Modified : /ee418/source/webui/webui/daos/DAO.php
+Modified : /ee418/source/webui/webui/daos/PatientDAO.php
+Modified : /ee418/source/webui/webui/daos/UserDAO.php
+Added : /ee418/source/webui/webui/daotest.php
+
+Revision: 83
+Author: edgars
+Date: 5:19:07 PM, Tuesday, November 03, 2009
+Message:
+Added method and object stubs for DAO objects.
+----
+Added : /ee418/source/webui/webui/daos
+Added : /ee418/source/webui/webui/daos/DAO.php
+Added : /ee418/source/webui/webui/daos/DailyTaskDAO.php
+Added : /ee418/source/webui/webui/daos/PatientDAO.php
+Added : /ee418/source/webui/webui/daos/UserDAO.php
+Added : /ee418/source/webui/webui/daos/WalkingTaskDAO.php
+
+Revision: 82
+Author: edgars
+Date: 4:47:24 PM, Tuesday, November 03, 2009
+Message:
+Added the phpEclipse project file.
+----
+Added : /ee418/source/webui/webui/.project
+
+Revision: 81
+Author: edgars
+Date: 4:46:22 PM, Tuesday, November 03, 2009
+Message:
+Initial import.
+----
+Added : /ee418/source/webui/webui
+
+Revision: 80
+Author: edgars
+Date: 11:52:18 AM, Tuesday, November 03, 2009
+Message:
+Completed method stubs for Getting and Setting DAO members from structures. Moved the structures from Service.cs to their correct *DAO.cs file.
+----
+Modified : /ee418/source/server/Service/Service/Service/ClassDiagram1.cd
+Modified : /ee418/source/server/Service/Service/Service/DAO.cs
+Modified : /ee418/source/server/Service/Service/Service/DailyTaskDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/PatientDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+Modified : /ee418/source/server/Service/Service/Service/StatisticsDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/UserDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/WalkingStatsDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/WalkingTaskDAO.cs
+
+Revision: 79
+Author: edgars
+Date: 10:56:07 PM, Monday, November 02, 2009
+Message:
+Added template methods for returning necessary structures to the web Service. The structs in Service will be changed to objects and moved to DAO files.
+----
+Modified : /ee418/source/server/Service/Service/Service/Class1.cs
+Modified : /ee418/source/server/Service/Service/Service/ClassDiagram1.cd
+Modified : /ee418/source/server/Service/Service/Service/DailyTaskDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+Modified : /ee418/source/server/Service/Service/Service/StatisticsDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/WalkingStatsDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/WalkingTaskDAO.cs
+
+Revision: 78
+Author: licataja
+Date: 3:58:22 PM, Monday, November 02, 2009
+Message:
+Updated PDA_GUI. Now can navigate between screens without wasted resources.
+----
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj.user
+Modified : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Modified : /ee418/source/pda/PDA_GUI/Program.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Modified : /ee418/source/pda/PDA_GUI/Statistics.cs
+
+Revision: 77
+Author: licataja
+Date: 2:49:23 PM, Monday, November 02, 2009
+Message:
+Added simple PDA_GUI in Windows Mobile 6 SDK
+----
+Added : /ee418/source/pda/PDA_GUI
+Added : /ee418/source/pda/PDA_GUI/DailyTasks.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/DailyTasks.cs
+Added : /ee418/source/pda/PDA_GUI/DailyTasks.resx
+Added : /ee418/source/pda/PDA_GUI/MainMenu.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/MainMenu.cs
+Added : /ee418/source/pda/PDA_GUI/MainMenu.resx
+Added : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj
+Added : /ee418/source/pda/PDA_GUI/PDA_GUI.csproj.user
+Added : /ee418/source/pda/PDA_GUI/PDA_GUI.sln
+Added : /ee418/source/pda/PDA_GUI/PDA_GUI.suo
+Added : /ee418/source/pda/PDA_GUI/Program.cs
+Added : /ee418/source/pda/PDA_GUI/Properties
+Added : /ee418/source/pda/PDA_GUI/Properties/AssemblyInfo.cs
+Added : /ee418/source/pda/PDA_GUI/Properties/Resources.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/Properties/Resources.resx
+Added : /ee418/source/pda/PDA_GUI/Statistics.Designer.cs
+Added : /ee418/source/pda/PDA_GUI/Statistics.cs
+Added : /ee418/source/pda/PDA_GUI/Statistics.resx
+Added : /ee418/source/pda/PDA_GUI/bin
+Added : /ee418/source/pda/PDA_GUI/bin/Debug
+Added : /ee418/source/pda/PDA_GUI/bin/Release
+Added : /ee418/source/pda/PDA_GUI/obj
+Added : /ee418/source/pda/PDA_GUI/obj/Debug
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/Refactor
+Added : /ee418/source/pda/PDA_GUI/obj/Debug/TempPE
+Added : /ee418/source/pda/PDA_GUI/obj/Release
+
+Revision: 76
+Author: ellisjc
+Date: 12:57:36 PM, Monday, November 02, 2009
+Message:
+Added a dummy WiiRemoteConnection class that reads from a file.
+----
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/Form1.Designer.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/PDA_App.csproj
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/PDA_App.csproj.user
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/Program.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/Stats.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/WalkingStats.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/WiiRemoteData.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App.suo
+
+Revision: 75
+Author: edgars
+Date: 9:08:35 PM, Sunday, November 01, 2009
+Message:
+Added the rest of the DAOs. There is a test routine in Class1.cs.
+----
+Modified : /ee418/source/server/Server/Server
+Modified : /ee418/source/server/Server/Server/Class1.cs
+Added : /ee418/source/server/Server/Server/DAO.cs
+Added : /ee418/source/server/Server/Server/DailyTaskDAO.cs
+Added : /ee418/source/server/Server/Server/PatientDAO.cs
+Modified : /ee418/source/server/Server/Server/Server.csproj
+Added : /ee418/source/server/Server/Server/StatisticsDAO.cs
+Added : /ee418/source/server/Server/Server/UserDAO.cs
+Added : /ee418/source/server/Server/Server/WalkingStatsDAO.cs
+Added : /ee418/source/server/Server/Server/WalkingTaskDAO.cs
+Modified : /ee418/source/server/Server/Server/bin/Debug
+Modified : /ee418/source/server/Server/Server/bin/Debug/Server.exe
+
+Revision: 74
+Author: edgars
+Date: 9:04:53 PM, Sunday, November 01, 2009
+Message:
+Removed unneeded files. These files should be generated by Visual Studio when they are needed.  They were removed to make the project smaller to update and store on SVN.
+----
+Modified : /ee418/source/server/Service/Service
+Modified : /ee418/source/server/Service/Service/Service
+Modified : /ee418/source/server/Service/Service/Service/bin
+Deleted : /ee418/source/server/Service/Service/Service/bin/Service.pdb
+Deleted : /ee418/source/server/Service/Service/Service/obj
+Deleted : /ee418/source/server/Service/Service/Service.suo
+
+Revision: 73
+Author: edgars
+Date: 9:00:09 PM, Sunday, November 01, 2009
+Message:
+Added DAO classes.
+----
+Added : /ee418/source/server/Service/Service/Service/Class1.cs
+Added : /ee418/source/server/Service/Service/Service/ClassDiagram1.cd
+Added : /ee418/source/server/Service/Service/Service/DAO.cs
+Added : /ee418/source/server/Service/Service/Service/DailyTaskDAO.cs
+Added : /ee418/source/server/Service/Service/Service/PatientDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+Modified : /ee418/source/server/Service/Service/Service/Service.csproj
+Added : /ee418/source/server/Service/Service/Service/StatisticsDAO.cs
+Added : /ee418/source/server/Service/Service/Service/UserDAO.cs
+Added : /ee418/source/server/Service/Service/Service/WalkingStatsDAO.cs
+Added : /ee418/source/server/Service/Service/Service/WalkingTaskDAO.cs
+Modified : /ee418/source/server/Service/Service/Service/Web.config
+Modified : /ee418/source/server/Service/Service/Service/bin/Service.dll
+Modified : /ee418/source/server/Service/Service/Service/bin/Service.pdb
+Modified : /ee418/source/server/Service/Service/Service/obj/Debug/Service.csproj.FileListAbsolute.txt
+Modified : /ee418/source/server/Service/Service/Service/obj/Debug/Service.dll
+Modified : /ee418/source/server/Service/Service/Service.suo
+
+Revision: 72
+Author: ellisjc
+Date: 5:28:29 PM, Sunday, November 01, 2009
+Message:
+Stuff done in meeting
+----
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/Program.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/WalkingStats.cs
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/WiiRemoteData.cs
+
+Revision: 71
+Author: ellisjc
+Date: 4:29:27 PM, Sunday, November 01, 2009
+Message:
+
+----
+Modified : /ee418/source/pda/PDA/PDA/PDA.csproj.user
+Modified : /ee418/source/pda/PDA/PDA.suo
+Modified : /ee418/source/pda/PDA/PDA_App/PDA_App/WiiRemoteData.cs
+
+Revision: 70
+Author: ellisjc
+Date: 2:49:24 PM, Sunday, November 01, 2009
+Message:
+
+----
+Added : /ee418/source/pda/PDA/PDA_App
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Form1.Designer.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Form1.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/PDA_App.csproj
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/PDA_App.csproj.user
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Program.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Properties
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Properties/AssemblyInfo.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Properties/Resources.Designer.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Properties/Resources.resx
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/RawData.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/Stats.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/WalkingStats.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/WiiRemoteData.cs
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/bin
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/bin/Debug
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/obj
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/obj/Debug
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App/obj/Debug/TempPE
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App.sln
+Added : /ee418/source/pda/PDA/PDA_App/PDA_App.suo
+
+Revision: 69
+Author: hadleymj
+Date: 2:25:08 PM, Sunday, November 01, 2009
+Message:
+Adds the PDA project which will contain all of the PDA classes and connection objects. 
+----
+Added : /ee418/source/pda/PDA
+Added : /ee418/source/pda/PDA/PDA
+Added : /ee418/source/pda/PDA/PDA/Form1.Designer.cs
+Added : /ee418/source/pda/PDA/PDA/Form1.cs
+Added : /ee418/source/pda/PDA/PDA/Form1.resx
+Added : /ee418/source/pda/PDA/PDA/PDA.csproj
+Added : /ee418/source/pda/PDA/PDA/PDA.csproj.user
+Added : /ee418/source/pda/PDA/PDA/Program.cs
+Added : /ee418/source/pda/PDA/PDA/Properties
+Added : /ee418/source/pda/PDA/PDA/Properties/AssemblyInfo.cs
+Added : /ee418/source/pda/PDA/PDA/Properties/Resources.Designer.cs
+Added : /ee418/source/pda/PDA/PDA/Properties/Resources.resx
+Added : /ee418/source/pda/PDA/PDA/bin
+Added : /ee418/source/pda/PDA/PDA/bin/Debug
+Added : /ee418/source/pda/PDA/PDA/bin/Debug/InTheHand.Net.Personal.dll
+Added : /ee418/source/pda/PDA/PDA/bin/Debug/InTheHand.Net.Personal.xml
+Added : /ee418/source/pda/PDA/PDA/bin/Debug/PDA.exe
+Added : /ee418/source/pda/PDA/PDA/bin/Debug/PDA.pdb
+Added : /ee418/source/pda/PDA/PDA/obj
+Added : /ee418/source/pda/PDA/PDA/obj/Debug
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.Form1.resources
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.Properties.Resources.resources
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.csproj.FileListAbsolute.txt
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.csproj.GenerateResource.Cache
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.exe
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/PDA.pdb
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/ResolveAssemblyReference.cache
+Added : /ee418/source/pda/PDA/PDA/obj/Debug/TempPE
+Added : /ee418/source/pda/PDA/PDA.sln
+Added : /ee418/source/pda/PDA/PDA.suo
+
+Revision: 68
+Author: finlayjt
+Date: 2:10:27 PM, Sunday, November 01, 2009
+Message:
+My first implementation of the Server-PDA Connection
+----
+Added : /ee418/source/server/Service
+Added : /ee418/source/server/Service/Service
+Added : /ee418/source/server/Service/Service/Service
+Added : /ee418/source/server/Service/Service/Service/App_Data
+Added : /ee418/source/server/Service/Service/Service/Properties
+Added : /ee418/source/server/Service/Service/Service/Properties/AssemblyInfo.cs
+Added : /ee418/source/server/Service/Service/Service/Service.asmx
+Added : /ee418/source/server/Service/Service/Service/Service.asmx.cs
+Added : /ee418/source/server/Service/Service/Service/Service.csproj
+Added : /ee418/source/server/Service/Service/Service/Service.csproj.user
+Added : /ee418/source/server/Service/Service/Service/Web.config
+Added : /ee418/source/server/Service/Service/Service/bin
+Added : /ee418/source/server/Service/Service/Service/bin/Service.dll
+Added : /ee418/source/server/Service/Service/Service/bin/Service.pdb
+Added : /ee418/source/server/Service/Service/Service/obj
+Added : /ee418/source/server/Service/Service/Service/obj/Debug
+Added : /ee418/source/server/Service/Service/Service/obj/Debug/Refactor
+Added : /ee418/source/server/Service/Service/Service/obj/Debug/Service.csproj.FileListAbsolute.txt
+Added : /ee418/source/server/Service/Service/Service/obj/Debug/Service.dll
+Added : /ee418/source/server/Service/Service/Service/obj/Debug/Service.pdb
+Added : /ee418/source/server/Service/Service/Service/obj/Debug/TempPE
+Added : /ee418/source/server/Service/Service/Service.sln
+Added : /ee418/source/server/Service/Service/Service.suo
+
+Revision: 67
+Author: edgars
+Date: 8:54:36 AM, Sunday, November 01, 2009
+Message:
+The MySQL workbench file was moved to source\database. The image erd.png was renamed ee418_db.png.
+----
+Deleted : /ee418/documentation/ee418 db design.mwb
+Added : /ee418/documentation/ee418_db.png
+Deleted : /ee418/documentation/erd.png
+
+Revision: 66
+Author: edgars
+Date: 8:52:25 AM, Sunday, November 01, 2009
+Message:
+The MySQL workbench file to create the database. Also the sql file to generate the tables in MySQL and the sql file to insert some sample data.
+----
+Added : /ee418/source/database
+Added : /ee418/source/database/ee418 db design.mwb
+Added : /ee418/source/database/ee418_data.sql
+Added : /ee418/source/database/ee418_db.sql
+
+Revision: 65
+Author: edgars
+Date: 8:12:00 PM, Friday, October 30, 2009
+Message:
+Converted to a live executing algorithm. In other words an algorithm that is run as the data is streaming in. This can be executed by passing the recorded data to SimulateSampling which will pass each row to ProcessRawData one at a time simulating the data stream arriving in real time. 
+
+When a step is detected the StepEventTrigger is called. This is a subfunction in ProcessRawData.m.
+
+Removed some asv files that don't seem to do anything.
+----
+Modified : /ee418/documentation/wii_data_processing
+Added : /ee418/documentation/wii_data_processing/ProcessRawData.m
+Added : /ee418/documentation/wii_data_processing/SimulateSampling.m
+Deleted : /ee418/documentation/wii_data_processing/diffSteps.asv
+Deleted : /ee418/documentation/wii_data_processing/test.asv
+Deleted : /ee418/documentation/wii_data_processing/wii_processing.asv
+Modified : /ee418/documentation/wii_data_processing/wii_processing.m
+
+Revision: 64
+Author: edgars
+Date: 9:58:41 PM, Wednesday, October 28, 2009
+Message:
+Updated Schedule.vsd
+----
+Modified : /ee418/documentation/Schedule.vsd
+
+Revision: 63
+Author: edgars
+Date: 9:53:29 PM, Wednesday, October 28, 2009
+Message:
+Moving wii data processing files to the appropriate directory.
+----
+Deleted : /ee418/documentation/11Steps.csv
+Deleted : /ee418/documentation/29Steps.csv
+Deleted : /ee418/documentation/51Steps.csv
+Deleted : /ee418/documentation/66Steps_sre.csv
+Deleted : /ee418/documentation/Calibrate.m
+Deleted : /ee418/documentation/MakeBlocks.m
+Deleted : /ee418/documentation/Minute of Data.csv
+Deleted : /ee418/documentation/Rows10.m
+Deleted : /ee418/documentation/StepAndStand.csv
+Deleted : /ee418/documentation/StepAndStand.jpg
+Deleted : /ee418/documentation/WalkingUpright.csv
+Deleted : /ee418/documentation/WalkingUpright.jpg
+Deleted : /ee418/documentation/WiiPlay.PIE
+Deleted : /ee418/documentation/count_steps.m
+Deleted : /ee418/documentation/diffSteps.asv
+Deleted : /ee418/documentation/diffSteps.m
+Deleted : /ee418/documentation/test.asv
+Deleted : /ee418/documentation/test.m
+Added : /ee418/documentation/wii_data_processing/11Steps.csv (Copy from path: /ee418/documentation/11Steps.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/29Steps.csv (Copy from path: /ee418/documentation/29Steps.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/51Steps.csv (Copy from path: /ee418/documentation/51Steps.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/66Steps_sre.csv (Copy from path: /ee418/documentation/66Steps_sre.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/Calibrate.m (Copy from path: /ee418/documentation/Calibrate.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/MakeBlocks.m (Copy from path: /ee418/documentation/MakeBlocks.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/Minute of Data.csv (Copy from path: /ee418/documentation/Minute of Data.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/Rows10.m (Copy from path: /ee418/documentation/Rows10.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/StepAndStand.csv (Copy from path: /ee418/documentation/StepAndStand.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/StepAndStand.jpg (Copy from path: /ee418/documentation/StepAndStand.jpg, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/WalkingUpright.csv (Copy from path: /ee418/documentation/WalkingUpright.csv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/WalkingUpright.jpg (Copy from path: /ee418/documentation/WalkingUpright.jpg, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/WiiPlay.PIE (Copy from path: /ee418/documentation/WiiPlay.PIE, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/count_steps.m (Copy from path: /ee418/documentation/count_steps.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/diffSteps.asv (Copy from path: /ee418/documentation/diffSteps.asv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/diffSteps.m (Copy from path: /ee418/documentation/diffSteps.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/test.asv (Copy from path: /ee418/documentation/test.asv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/test.m (Copy from path: /ee418/documentation/test.m, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/wii_processing.asv (Copy from path: /ee418/documentation/wii_processing.asv, Revision, 62)
+Added : /ee418/documentation/wii_data_processing/wii_processing.m (Copy from path: /ee418/documentation/wii_processing.m, Revision, 62)
+Deleted : /ee418/documentation/wii_processing.asv
+Deleted : /ee418/documentation/wii_processing.m
+
+Revision: 62
+Author: edgars
+Date: 9:51:58 PM, Wednesday, October 28, 2009
+Message:
+
+----
+Added : /ee418/documentation/wii_data_processing
+
+Revision: 61
+Author: edgars
+Date: 9:49:50 PM, Wednesday, October 28, 2009
+Message:
+Backing up a working count steps algorithm. It process steps after they are recorded. A live algorithm will be developed soon.
+----
+Added : /ee418/documentation/11Steps.csv
+Added : /ee418/documentation/29Steps.csv
+Added : /ee418/documentation/51Steps.csv
+Added : /ee418/documentation/66Steps_sre.csv
+Added : /ee418/documentation/Calibrate.m
+Added : /ee418/documentation/MakeBlocks.m
+Added : /ee418/documentation/Minute of Data.csv
+Added : /ee418/documentation/Rows10.m
+Added : /ee418/documentation/StepAndStand.csv
+Added : /ee418/documentation/StepAndStand.jpg
+Added : /ee418/documentation/WalkingUpright.csv
+Added : /ee418/documentation/WalkingUpright.jpg
+Added : /ee418/documentation/WiiPlay.PIE
+Added : /ee418/documentation/count_steps.m
+Added : /ee418/documentation/diffSteps.asv
+Added : /ee418/documentation/diffSteps.m
+Added : /ee418/documentation/test.asv
+Added : /ee418/documentation/test.m
+Added : /ee418/documentation/wii_processing.asv
+Added : /ee418/documentation/wii_processing.m
+
+Revision: 60
+Author: edgars
+Date: 6:30:32 PM, Wednesday, October 28, 2009
+Message:
+Added Server project and setup code to connect and read to/from a mysql database.
+----
+Added : /ee418/source/server/Server
+Added : /ee418/source/server/Server/Server
+Added : /ee418/source/server/Server/Server/Class1.cs
+Added : /ee418/source/server/Server/Server/Server.csproj
+Added : /ee418/source/server/Server/Server/bin
+Added : /ee418/source/server/Server/Server/bin/Debug
+Added : /ee418/source/server/Server/Server/bin/Debug/Server.exe
+Added : /ee418/source/server/Server/Server.sln
+
+Revision: 59
+Author: edgars
+Date: 8:41:25 PM, Tuesday, October 27, 2009
+Message:
+Latest version of the HLD with all the Unit Test Plan parts included.
+----
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 58
+Author: licataja
+Date: 4:17:07 PM, Tuesday, October 27, 2009
+Message:
+PDA GUI Visio.vsd diagrams
+-Jim
+----
+Added : /ee418/documentation/PDA GUI Visio.vsd
+
+Revision: 57
+Author: hadleymj
+Date: 3:53:39 PM, Tuesday, October 27, 2009
+Message:
+Add the Homepages and Change Daily Task Unit Test Plans
+----
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 56
+Author: ellisjc
+Date: 12:29:34 PM, Tuesday, October 27, 2009
+Message:
+Added the .h files for RawData.h PDAStats.h(Stats.h was taken by whatever someone did to setup the project) WiiRemoteData.h and WalkingStats.h.
+----
+Modified : /ee418/source/pda/BT_treo/BT_treo.vcproj
+Added : /ee418/source/pda/BT_treo/PDAStats.h
+Added : /ee418/source/pda/BT_treo/RawData.h
+Added : /ee418/source/pda/BT_treo/WalkingStats.h
+Added : /ee418/source/pda/BT_treo/WiiRemoteData.h
+Modified : /ee418/source/pda/BT_treo/Windows Mobile 5.0 Pocket PC SDK (ARMV4I)/Debug/BT_treo.exe
+Modified : /ee418/source/pda/BT_treo.suo
+
+Revision: 55
+Author: edgars
+Date: 10:14:14 AM, Tuesday, October 27, 2009
+Message:
+Added Schedule.vsd, and ERD diagram and png. Also added my part and John's part of the test plan documentation. It will probably be re-organized in the future.
+----
+Added : /ee418/documentation/Schedule.vsd
+Added : /ee418/documentation/ee418 db design.mwb
+Added : /ee418/documentation/erd.png
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 54
+Author: edgars
+Date: 12:00:40 PM, Sunday, October 25, 2009
+Message:
+Folder to store the server code. This excludes the webui! This is only for C# code that is the web service.
+----
+Added : /ee418/source/server
+
+Revision: 53
+Author: edgars
+Date: 11:59:41 AM, Sunday, October 25, 2009
+Message:
+Folder to store the webui scripts and code.
+----
+Added : /ee418/source/webui
+
+Revision: 52
+Author: edgars
+Date: 7:30:44 PM, Tuesday, October 20, 2009
+Message:
+Added diagrams and tables to the high_level_design.pdf document.
+----
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 51
+Author: hadleymj
+Date: 7:08:48 PM, Tuesday, October 20, 2009
+Message:
+Adds png images for class diagrams and updates the Visio Project
+----
+Modified : /ee418/documentation/ClassDiagrams.vsd
+Deleted : /ee418/documentation/PDAClasses.vsd
+Added : /ee418/documentation/PDA_Alert_Hierarchy.png
+Added : /ee418/documentation/PDA_Patient_GUI.png
+Added : /ee418/documentation/PDA_Server_Connection.png
+Added : /ee418/documentation/Server_PDA_Connection.png
+Added : /ee418/documentation/Server_Web_UI.png
+
+Revision: 50
+Author: hadleymj
+Date: 6:14:26 PM, Tuesday, October 20, 2009
+Message:
+Splits up the PDA Class Diagrams
+----
+Modified : /ee418/documentation/ClassDiagrams.vsd
+
+Revision: 49
+Author: hadleymj
+Date: 4:00:29 PM, Tuesday, October 20, 2009
+Message:
+Cleans up the Server Object Class Diagram
+----
+Modified : /ee418/documentation/ClassDiagrams.vsd
+
+Revision: 48
+Author: hadleymj
+Date: 12:25:01 PM, Tuesday, October 20, 2009
+Message:
+Updates to the ClassDiagrams
+----
+Added : /ee418/documentation/ClassDiagrams.vsd
+
+Revision: 47
+Author: edgars
+Date: 11:34:27 PM, Monday, October 19, 2009
+Message:
+Most recent meeting's notes added.
+----
+Added : /ee418/meeting_notes/20091019.txt
+Added : /ee418/meeting_notes/Major System Components.jpg
+Added : /ee418/meeting_notes/PDA to Server Interface.jpg
+Added : /ee418/meeting_notes/template.tex
+
+Revision: 46
+Author: licataja
+Date: 2:46:45 PM, Monday, October 19, 2009
+Message:
+Updated from meeting in class today
+-Jim
+----
+Modified : /ee418/documentation/PDAClasses.vsd
+
+Revision: 45
+Author: hadleymj
+Date: 11:26:20 AM, Monday, October 19, 2009
+Message:
+Adds the PDA Class diagrams from Sunday's 10/18/09 meeting.
+----
+Added : /ee418/documentation/PDAClasses.vsd
+
+Revision: 44
+Author: edgars
+Date: 10:15:21 AM, Saturday, October 17, 2009
+Message:
+Revisions to HLD:
+-Added Object Domain Diagrams
+-Defined DAOs
+-Competion Chart typo fixed.
+-Removed line for testing xr at the end of document
+-Added more definitions to Object Section (Note there are still more objects that need definitions.)
+----
+Added : /ee418/documentation/PDA_ooda.PNG
+Added : /ee418/documentation/Server1_ooda.PNG
+Added : /ee418/documentation/Server2_ooda.PNG
+Added : /ee418/documentation/Server3_ooda.PNG
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 43
+Author: edgars
+Date: 11:08:26 PM, Thursday, October 15, 2009
+Message:
+Removed DAO sections.
+----
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 42
+Author: edgars
+Date: 11:02:18 PM, Thursday, October 15, 2009
+Message:
+Build the latest version of the HLD and SRS.
+----
+Deleted : /ee418/documentation/PDA to Server Interface Diagram.png
+Added : /ee418/documentation/PDA_to_Server_Interface_Diagram.png
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+Modified : /ee418/documentation/system_requirement_specification.pdf
+
+Revision: 41
+Author: hadleymj
+Date: 10:43:37 PM, Thursday, October 15, 2009
+Message:
+Makes some final changes to the HLD to hand into Professor Conry. Adds Descriptions to the OO Design section.
+----
+Modified : /ee418/documentation/high_level_design.tex
+Added : /ee418/documentation/system_requirement_specification.pdf
+
+Revision: 40
+Author: edgars
+Date: 7:00:48 PM, Thursday, October 15, 2009
+Message:
+Joe's, John's, and Brett's parts were added. This includes, the Major System Components Diagram, the original HLD diagrams and text, and the Description of the Major System Components, respectively. 
+----
+Added : /ee418/documentation/HLDSystemFlow.jpg
+Added : /ee418/documentation/HLDdataFlowDiagram.jpg
+Added : /ee418/documentation/HLDuseCaseDiagram.jpg
+Added : /ee418/documentation/HLDuserFlow.jpg
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+Added : /ee418/documentation/major_system_components.PNG
+
+Revision: 39
+Author: edgars
+Date: 4:58:16 PM, Thursday, October 15, 2009
+Message:
+The descriptions for the Web UI interfaces were added.
+----
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 38
+Author: hadleymj
+Date: 3:34:25 PM, Thursday, October 15, 2009
+Message:
+Adds the section for descriptions in the PDA to Server Interface Diagram.
+----
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 37
+Author: hadleymj
+Date: 3:33:45 PM, Thursday, October 15, 2009
+Message:
+Newer PDF version of the HLD
+----
+Replacing : /ee418/documentation/high_level_design.pdf
+
+Revision: 36
+Author: hadleymj
+Date: 12:35:56 PM, Thursday, October 15, 2009
+Message:
+Adds PDA to Server Interface Diagrams. Both the Visio Project and the .png image. 
+----
+Added : /ee418/documentation/PDA to Server Interface Diagram.png
+Added : /ee418/documentation/PDA to Server Interface Diagram.vsd
+
+Revision: 35
+Author: hadleymj
+Date: 12:03:51 PM, Thursday, October 15, 2009
+Message:
+Updates the SRS to include Features for Administrator functions (Add/Remove/Edit Clinician and Researcher Accounts). Also adds Administrator Homepage feature. The Latex Label file has been updated accordingly. 
+----
+Modified : /ee418/documentation/Full Section Title - Latex Label.txt
+Deleted : /ee418/documentation/system_reqts_spec_Oct14.pdf
+Added : /ee418/documentation/system_reqts_spec_Oct15.pdf
+Deleted : /ee418/documentation/system_requirement_specification.pdf
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 34
+Author: edgars
+Date: 11:02:23 PM, Wednesday, October 14, 2009
+Message:
+Added the SSD. Originally drafted by the HLD group.
+----
+Added : /ee418/documentation/SSD_Oct4.doc
+
+Revision: 33
+Author: edgars
+Date: 11:00:49 PM, Wednesday, October 14, 2009
+Message:
+Added web ui interfaces visio diagram and section to HLD.
+----
+Added : /ee418/documentation/Web UI to Db Interface Diagram.vsd
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+Added : /ee418/documentation/webui_interfaces_1.png
+Added : /ee418/documentation/webui_interfaces_2.png
+
+Revision: 32
+Author: edgars
+Date: 9:57:53 PM, Wednesday, October 14, 2009
+Message:
+Revised Section headings. Removed ERD section and added Major System Components section.
+----
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 31
+Author: edgars
+Date: 9:35:34 PM, Wednesday, October 14, 2009
+Message:
+Correction to meeting notes.
+----
+Modified : /ee418/meeting_notes/20091012.txt
+
+Revision: 30
+Author: edgars
+Date: 9:35:04 PM, Wednesday, October 14, 2009
+Message:
+Added more to the HLD template.
+----
+Modified : /ee418/documentation/Full Section Title - Latex Label.txt
+Modified : /ee418/documentation/high_level_design.pdf
+Modified : /ee418/documentation/high_level_design.tex
+
+Revision: 29
+Author: hadleymj
+Date: 3:44:00 PM, Wednesday, October 14, 2009
+Message:
+The most recent PDF for the SRS. Includes Clinician/Researcher Homepage changes as well as the Clinician GUI changes.
+----
+Added : /ee418/documentation/system_reqts_spec_Oct14.pdf
+
+Revision: 28
+Author: hadleymj
+Date: 3:40:00 PM, Wednesday, October 14, 2009
+Message:
+Added features for Researcher/Clinician Homepage, as well as Clinician GUI. Still need an Admin Feature.
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 27
+Author: edgars
+Date: 4:08:09 PM, Tuesday, October 13, 2009
+Message:
+Recompile SRS, added index of sections and their latex label. To reference the section use \ref{latex label}. So to reference the Battery Status section: \ref{sec: Battery Status}.
+----
+Added : /ee418/documentation/Full Section Title - Latex Label.txt
+Modified : /ee418/documentation/system_requirement_specification.pdf
+
+Revision: 26
+Author: ellisjc
+Date: 1:21:31 PM, Tuesday, October 13, 2009
+Message:
+
+----
+Added : /ee418/documentation/MoreHLD_Diagrams.vsd
+
+Revision: 25
+Author: ellisjc
+Date: 12:56:42 PM, Tuesday, October 13, 2009
+Message:
+HLD shown in class.
+
+Only changes is plug into laptop is now acquire Internet
+----
+Added : /ee418/documentation/HLD_v1.doc
+
+Revision: 24
+Author: edgars
+Date: 10:41:05 PM, Monday, October 12, 2009
+Message:
+Added tex template for high_level_design document. Also labeled all feature sections in SRS.
+
+The cross linking code is in place to cross-reference the SRS and the HLD.
+
+Also adjusted the figure code in the SRS, and tweaked some sentences.
+----
+Added : /ee418/documentation/high_level_design.pdf
+Added : /ee418/documentation/high_level_design.tex
+Modified : /ee418/documentation/system_requirement_specification.pdf
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 23
+Author: edgars
+Date: 9:16:04 PM, Monday, October 12, 2009
+Message:
+Meeting notes for HLD II on 10/12/2009 added.
+----
+Added : /ee418/meeting_notes/20091012.txt
+
+Revision: 22
+Author: edgars
+Date: 8:18:56 PM, Sunday, October 11, 2009
+Message:
+Notes for HLD meeting: 10/11/2009.
+----
+Added : /ee418/meeting_notes/20091011.txt
+
+Revision: 21
+Author: edgars
+Date: 4:48:50 PM, Friday, October 09, 2009
+Message:
+Fixed some Latex syntax errors and altered margins to the standard 1in. To remove 1in margins remove \usepackage...{geometry}.
+
+Also the .pdf was added and it is the latest version of the document.
+----
+Added : /ee418/documentation/system_requirement_specification.pdf
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 20
+Author: hadleymj
+Date: 10:09:42 PM, Thursday, October 08, 2009
+Message:
+Cleaned up some sections regarding data dump and daily task updates
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+Modified : /ee418/source/pda/BT_treo.suo
+
+Revision: 19
+Author: edgars
+Date: 5:26:27 PM, Tuesday, October 06, 2009
+Message:
+Initial add of the bluetooth example. This is not operation and needs some work.  The objective is to discover the Wii Remote and connect to it using a Bluetooth HID profile.
+----
+Modified : /ee418/source/pda
+Added : /ee418/source/pda/BT_treo
+Added : /ee418/source/pda/BT_treo/BT_treo.cpp
+Added : /ee418/source/pda/BT_treo/BT_treo.h
+Added : /ee418/source/pda/BT_treo/BT_treo.vcproj
+Added : /ee418/source/pda/BT_treo/BT_treo.vcproj.POS.sredgar.user
+Added : /ee418/source/pda/BT_treo/BT_treoDlg.cpp
+Added : /ee418/source/pda/BT_treo/BT_treoDlg.h
+Added : /ee418/source/pda/BT_treo/BT_treoppc.aps
+Added : /ee418/source/pda/BT_treo/BT_treoppc.rc
+Added : /ee418/source/pda/BT_treo/ReadMe.txt
+Added : /ee418/source/pda/BT_treo/WinSock_BT.cpp
+Added : /ee418/source/pda/BT_treo/WinSock_BT.h
+Added : /ee418/source/pda/BT_treo/Windows Mobile 5.0 Pocket PC SDK (ARMV4I)
+Added : /ee418/source/pda/BT_treo/Windows Mobile 5.0 Pocket PC SDK (ARMV4I)/Debug
+Added : /ee418/source/pda/BT_treo/Windows Mobile 5.0 Pocket PC SDK (ARMV4I)/Debug/BT_treo.exe
+Added : /ee418/source/pda/BT_treo/res
+Added : /ee418/source/pda/BT_treo/res/BT_treo.ico
+Added : /ee418/source/pda/BT_treo/res/BT_treoppc.rc2
+Added : /ee418/source/pda/BT_treo/resourceppc.h
+Added : /ee418/source/pda/BT_treo/stdafx.cpp
+Added : /ee418/source/pda/BT_treo/stdafx.h
+Added : /ee418/source/pda/BT_treo.sln
+Added : /ee418/source/pda/BT_treo.suo
+
+Revision: 18
+Author: edgars
+Date: 5:16:41 PM, Tuesday, October 06, 2009
+Message:
+Add folder for source code of the client gui application on PDA.
+----
+Added : /ee418/source/pda
+
+Revision: 17
+Author: edgars
+Date: 5:15:20 PM, Tuesday, October 06, 2009
+Message:
+Create source folder for source code.
+----
+Added : /ee418/source
+
+Revision: 16
+Author: hadleymj
+Date: 11:20:18 AM, Tuesday, October 06, 2009
+Message:
+Added small section about when the Daily Task starts.
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 15
+Author: hadleymj
+Date: 3:45:14 PM, Monday, October 05, 2009
+Message:
+SRS Rev 2 
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 14
+Author: edgars
+Date: 11:20:30 AM, Monday, October 05, 2009
+Message:
+Clarified Data Dump and Emergency Data Dump features.
+Explicitly stated that the PDA begins recording data as soon as the Activity Monitor application is running.
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 13
+Author: edgars
+Date: 10:41:07 AM, Sunday, October 04, 2009
+Message:
+Adding meeting notes.
+----
+Added : /ee418/meeting_notes/20090921.txt
+Added : /ee418/meeting_notes/20091002.txt
+Added : /ee418/meeting_notes/20091003.txt
+
+Revision: 12
+Author: edgars
+Date: 12:03:08 PM, Thursday, October 01, 2009
+Message:
+The diagram was missing. It has now been added.
+----
+Added : /ee418/documentation/objstuff.PNG
+
+Revision: 11
+Author: edgars
+Date: 12:02:41 PM, Thursday, October 01, 2009
+Message:
+Added meeting notes for 9/30.
+----
+Added : /ee418/meeting_notes/20090916.txt (Copy from path: /ee418/meeting_notes/20091609.txt, Revision, 9)
+Added : /ee418/meeting_notes/20090930.txt
+Deleted : /ee418/meeting_notes/20091609.txt
+
+Revision: 10
+Author: edgars
+Date: 6:58:49 AM, Sunday, September 27, 2009
+Message:
+
+----
+Modified : /ee418/documentation/system_requirement_specification.tex
+
+Revision: 9
+Author: ryan
+Date: 6:14:52 AM, Sunday, September 27, 2009
+Message:
+
+----
+Added : /ee418/meeting_notes/20090914.txt
+Added : /ee418/meeting_notes/20090920.txt
+Added : /ee418/meeting_notes/20091609.txt
+
+Revision: 8
+Author: ryan
+Date: 6:10:55 AM, Sunday, September 27, 2009
+Message:
+
+----
+Added : /ee418/meeting_notes
+
+Revision: 7
+Author: ryan
+Date: 6:10:45 AM, Sunday, September 27, 2009
+Message:
+
+----
+Deleted : /ee418/Documentation
+Added : /ee418/documentation (Copy from path: /ee418/Documentation, Revision, 6)
+
+Revision: 6
+Author: ryan
+Date: 6:10:24 AM, Sunday, September 27, 2009
+Message:
+
+----
+Deleted : /EE418
+Added : /ee418 (Copy from path: /EE418, Revision, 5)
+

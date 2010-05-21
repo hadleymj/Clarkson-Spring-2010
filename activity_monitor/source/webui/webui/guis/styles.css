@@ -1,0 +1,102 @@
+a:visited{
+color:blue;
+}
+
+#fullwrapper { 
+ margin: 0 auto;
+ width: 1100px;
+}
+#bottomwrapper {
+ margin-bottom: 0px;
+ width: 100%;
+}
+#header {
+ text-align: center;
+ color: #333;
+ width: 1100px;
+ padding: 0px;
+ height: 100px;
+ margin: 0px 0px 0px 0px;
+ background: #D1DBDB;
+}
+
+#header h1{
+ padding:30px;	
+}
+
+#columnwrapper0 {
+ float: left;
+ background: #D1DBDB;
+}
+
+#leftminibar {
+ width: 200px;
+ height: 3px;
+ background: #ABBEBE;
+}
+
+#leftcolumn { 
+ float: left;
+ color: #333;
+ margin-left: 60px;
+ margin-top: 40px;
+ padding: 0px;
+ width: 140px;
+ height: 300px;
+ background: #D1DBDB;
+}
+
+#leftcolumn a:visited {
+	color: blue;
+}
+
+#leftcolumn a:active {
+	color: green;	
+}
+
+#columnwrapper {
+ width: 900px;
+ float: left;
+}
+
+#breadcrumbs {
+
+ color: #333;
+ height: 30px;
+ width: 900px;
+ padding: 0px;
+ margin: 0px 0px 0px 0px;
+ background: #ABBEBE;
+}
+
+#content {
+
+}
+
+#content1{
+float: left;
+}
+	
+#content2{
+float: left;
+margin-left:80px;
+}
+
+table.error {
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.welcome {
+text-align: center;	
+}
+
+
+#footer { 
+ width: 1100px;
+ clear: both;
+ color: #333;
+ background: #ABBEBE;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}

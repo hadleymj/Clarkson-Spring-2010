@@ -1,0 +1,4 @@
+refactor u_import -- use curr_inode
+
+watch out for ordering of updates 
+Create sub functions for searching while loops 

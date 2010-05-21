@@ -1,0 +1,16 @@
+OpSys 
+Writing Your Own Shell
+
+Assignment Description:
+All required features are completed, and were tested.
+
+Optional features implemented:
+	-Tab completion (8)
+	-Up and Down Arrows for history (9)
+	-Advanced Piping (3)
+	-Job statuses. We have implemented a feature in the jobs built-in command so that you can view the status of the jobs as well as the command and PID. Also, when a certain background job completes, the updated status is notified to the user. 
+
+Teammates:
+Michael Hadley
+James Licata
+

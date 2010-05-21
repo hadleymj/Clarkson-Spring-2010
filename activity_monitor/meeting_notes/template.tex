@@ -1,0 +1,39 @@
+\documentclass{article}
+
+%THIS IS A COMMENT.
+
+\usepackage{amssymb,amsmath}
+\usepackage[left=1in,top=1in,right=1in]{geometry}
+
+\begin{document}
+
+\begin{tabular}[t]{|c|c|p{4in}|}
+\hline
+Class & Method & Description \\
+\hline %Horizontal Bar accross table.
+
+%This column spans multiple rows.
+Server
+
+	%One row of the table.  '&' Is the column separator. '\\' Is the row terminator.
+	& main() & Called when initialized. This method opens a listening socket and waits for the PDA connections. \\
+
+	%Separate the two rows of the Server methods by a horizontal line. This is required.
+	\cline{2-3}
+
+	%Second row of the table.
+  & listen() & Starts the listening socket. \\
+
+\hline %Horizontal bar accross table.
+
+%I got lazy and only commented the first block. :-)
+PDAConnection
+      & getRequest() & Receive requests from the PDA and parse them into upload Stats or request of Daily Task messages. \\
+\cline{2-3}
+      & sendTask() & Send the daily task to the PDA. \\
+\cline{2-3}
+      & sendAck() & Send a ACK or NACK to the PDA to indicate whether the Stats were successfully received or not. \\
+\hline
+\end{tabular}
+
+\end{document}

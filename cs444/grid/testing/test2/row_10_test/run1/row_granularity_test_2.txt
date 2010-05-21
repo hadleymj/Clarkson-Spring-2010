@@ -1,0 +1,17 @@
+Initial Grid:
+
+63	3	
+61	50	
+
+Initial Sum:  177
+Executing threads...
+
+Final Grid:
+
+50	63	
+3	63	
+
+
+Final Sum:  179
+DATA INTEGRITY VIOLATION!!!!!
+Secs elapsed:  192

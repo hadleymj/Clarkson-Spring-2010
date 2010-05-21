@@ -1,0 +1,21 @@
+Divide up Remaining Parts of SRS
+
+Definitions:	Jim
+2.5:		Joe
+2.7:		Andrew
+4.1:		Andrew
+4.2:		John
+4.3:		Jacor
+4.4:		Jim
+5.1:		Brett
+5.2:		Brett
+5.3:		Steve
+5.4:		Steve
+6:		Mike
+7:		Jon
+8:		Ryan
+
+Next meeting 4:00pm Wednesday.
+Thursday at 1:00pm.
+
+Document Organized by priority of feature.

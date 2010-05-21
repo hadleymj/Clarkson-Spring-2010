@@ -1,0 +1,45 @@
+CS 444
+Grid Locking Granularity
+2/23/10
+
+Mike Hadley and James Licata
+
+Our tarball contains the following:
+
+gridapp.c -- Implemenation of both the Windows and Linux locking scheme
+CS444_GridLock.xls -- Excel spreadsheet containing the data gather for the 76 tests. There is also
+another sheet that contains the 8 required graphs. 
+
+grid_writeup.doc -- This word document answers the questions pertaining to:
+		-Effect of grid size
+		-Effect of # threads
+		-Effect of granularity of locking
+		-Effect of sleep(1)
+		-Explanation of the deadlocking scheme
+
+sleep_test/ -- This directory contains tests pertaining to moving around the sleep(1) line in gridapp.c
+
+	test_sleep_after/ -- This directory contains the output for gridapp when the sleep(1) instruction was issued right after the critical
+				code (but before unlock).
+	test_sleep_before/ -- This directory contains the output for gridapp when the sleep(1) instruction was issued right before the critical
+				code (but after lock).
+	Note that there are no changes in the program output that are inconsistent with the original testing (with the sleep(1) in the middle of the C.S.)
+
+	test_sleep_removed/ -- This directory contains the output for gridapp when the sleep(1) instruction is omitted. All of the output (for all granularities)
+				reports back that the data integrity is maintained. 
+
+
+testing/ -- This directory contains the output for our 76 required tests.
+	test1/ -- Grid Size is kept at 10, and the threads are varied from 1 to 10. There are 30 files in each of the 4 subdirectories (one for each granularity) for a total of 120 tests.
+		The subdirectories within each granularity (row_test1, for example) indicate which program "run" the output files correspond to. All of the tests were run 3 times. 
+		The last number/index  in the .txt output files indicates the number of threads used for that particular run.
+
+	test2/ -- Thread count is kept at 10, and the grid size is varied from 2 to 10. There are 27 files in each of the 4 subdirectories (one for each granularity) for a total of 108 tests.
+		The subdirectories within each granularity (row_test1, for example) indicate which program "run" the output files correspond to. All of the tests were run 3 times. 
+		Again, the last number/index  in the .txt output files indicates the size of the grid used for that particular run.
+
+Note that some of the tests that seemed repetitive (for example, the ones which kept producing the same time elapsed values everytime) were only performed one or two times. Most notably
+the no locking scheme.
+
+testingscript2.sh -- This is the shell script we used to run all of our tests 
+	

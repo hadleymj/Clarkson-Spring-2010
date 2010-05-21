@@ -1,0 +1,20 @@
+Windows Mobile 5 SDK Upgrade
+Visual Studio 2008
+Active Sync
+
+BlueSoleil 15 day trial
+GlovePie
+
+wmgui (windows?)
+
+
+
+PDA can execute Win32Api code, or C# Code using Windows Mobile 5 SDK.
+PDA has internet when connected to the PC.
+
+Connections using Bluetooth.
+Wii Remote can connect to wmgui on Linux.
+Wii Remote can connect to GlovePie on Windows.
+Have a Wii remote API to test.(in c)
+Have the source code to wmgui.(in c)
+

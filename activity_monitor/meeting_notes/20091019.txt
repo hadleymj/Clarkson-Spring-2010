@@ -1,0 +1,31 @@
+Continued Methods and Members for domain objects.
+
+Next meeting 6:00pm Tuesday TAC. We will have these parts completed and attempt to compile the document then.
+
+Jacor, John, Mike, Ryan, Jim
+
+
+Make a table for descriptions that looks something like this in Latex. See the template.tex file for an example.
+
++---------------------------------------------------------------------------------+
+|  Class      |    Method        |              Description                       |
++---------------------------------------------------------------------------------+
+|  Server     |    main          |  Called when initialized. This method opens a  |
+|	      |                  |  a listening socket and waits for PDA          |
+|             |                  |  connections.                                  |
+|             +------------------+------------------------------------------------+
+|             |      listen      |  Starts the listening socket.                  |
+|-------------+------------------+------------------------------------------------+          
+
+
+The latex template is attached. To compile go to: http://dev.baywifi.com/latex/Default.aspx
+
+
+
+Who's Doing What:
+
+Ryan: Server, PDAConnections, WiiRemoteData, DailyTask, WalkingTask, AdminGui, ClinicianGUI
+John: GUI, DailyTasksGui, Chart, CompletionChart, GroupChart, HealthChart
+Jacor: Alert, PDA_Alert, Wii_Alert, Login, ListPatients, PatientProfile
+Jim: Connection, WiiRemoteConnection, ServerConnection, Stats, WalkingStats,
+Mike: Homepage, ResearcherHome, ClinicianHome, AdminHome, ChangeDailyTaks

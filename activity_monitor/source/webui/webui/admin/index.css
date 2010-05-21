@@ -1,0 +1,17 @@
+#loginpage {
+ margin: auto;
+ background: #D1DBDB;
+ text-align: center;
+ height: 500px;
+ width: 902px;
+}
+
+#loginform {
+ padding: 150px;
+ text-align: center;
+}
+
+table.error {
+ margin-left: auto;
+ margin-right: auto;
+}

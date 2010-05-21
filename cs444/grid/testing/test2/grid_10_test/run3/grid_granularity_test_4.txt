@@ -1,0 +1,21 @@
+Initial Grid:
+
+68	21	54	0	
+90	33	86	18	
+26	13	8	13	
+79	26	17	89	
+
+Initial Sum:  641
+Executing threads...
+
+Final Grid:
+
+90	68	13	89	
+26	8	13	54	
+86	26	79	17	
+33	21	0	18	
+
+
+Final Sum:  641
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  200

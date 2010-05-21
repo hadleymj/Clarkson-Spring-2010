@@ -1,0 +1,124 @@
+Jim, Ryan, John, Mike, Steve, Jacor, Jon
+
+Next meeting 5:30pm Wed 2nd Floor TAC.
+
+Requirements Breakdown.
+
+Ryan - Cross Reference Documents and Label Sections by Wed. Email when completed. Put up template for HLD.
+John - Visiofy Class Diagram
+
+
+Update SRS
+	Admin account on the server.
+	Clincian UI on the PDA. By expanding 3.1.8
+
+GUI on the PDA
+	3.1.1
+
+	Tasks Display 
+		3.2.8
+		3.2.9
+
+	Statistics 
+		3.2.5
+		3.2.10
+		
+	Alerts
+		3.2.5
+		3.1.11
+		3.1.3
+		3.1.12
+		3.2.4
+	
+	Clinician GUI
+		3.1.8
+		
+	Wii Remote Data
+		3.1.10 - change store to summerize.
+		3.2.10
+
+PDA Connection Objects
+		
+	Wii Remote Connection
+		3.2.7
+		3.2.4
+		3.1.9
+		3.1.7
+		3.1.12
+
+	Server Connection
+		3.1.2
+		3.1.3
+		3.1.8
+		3.2.3
+		
+
+Server for PDA
+	
+	PDA
+		3.1.2
+		3.1.3
+		3.1.8
+		3.2.3
+
+	Daily Task - shared by PDA and server. Both can instantiate and use this object.
+		3.2.2
+		3.2.3
+		3.2.8		
+
+
+	Stats
+		3.2.10
+		The server stores the data in the database. (For future use by clinicians and researched ...)
+		3.3.1
+		3.3.2
+		3.3.3	
+		
+					
+Web UI
+	3.1.5
+
+	Login
+		3.2.6
+		
+	Patient Add/Remove/Edit/View
+		3.1.4
+		3.1.6
+		3.2.1
+
+	Homepage
+		
+		Researcher
+			Add Requirement - LInks to charts.
+
+
+		Clinician
+			Add Requirement - LInks to list patients, add/remove/edit patient, links to charts (for only their patient's)
+
+
+	Admin UI
+		Add requirement for Admin ui. This will let an administrator add and remove clinicians and researchers.
+		3.1.6
+
+
+	Change Daily Task
+		3.2.2
+
+	List Patients
+		3.2.1
+		3.1.4
+
+	Charts
+		3.3.1
+		3.3.2
+		3.3.3
+	
+
+
+
+
+
+
+
+
+				

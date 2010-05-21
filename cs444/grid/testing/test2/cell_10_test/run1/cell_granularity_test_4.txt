@@ -1,0 +1,21 @@
+Initial Grid:
+
+81	81	87	90	
+89	72	61	44	
+25	44	69	70	
+1	4	39	4	
+
+Initial Sum:  861
+Executing threads...
+
+Final Grid:
+
+4	4	81	81	
+89	90	81	87	
+69	90	39	81	
+61	44	81	25	
+
+
+Final Sum:  1007
+DATA INTEGRITY VIOLATION!!!!!
+Secs elapsed:  105

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://128.153.180.31:81/ActivityMonitor/ActivityMonitor.asmx?wsdl" docRef="http://128.153.180.31:81/ActivityMonitor/ActivityMonitor.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://128.153.180.31:81/ActivityMonitor/ActivityMonitor.asmx" xmlns:q1="http://localhost:2345" binding="q1:ActivityMonitorSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://128.153.180.31:81/ActivityMonitor/ActivityMonitor.asmx" xmlns:q2="http://localhost:2345" binding="q2:ActivityMonitorSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

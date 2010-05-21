@@ -1,0 +1,19 @@
+Initial Grid:
+
+98	42	56	
+56	91	28	
+76	66	66	
+
+Initial Sum:  579
+Executing threads...
+
+Final Grid:
+
+56	98	66	
+42	66	76	
+28	56	91	
+
+
+Final Sum:  579
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  200

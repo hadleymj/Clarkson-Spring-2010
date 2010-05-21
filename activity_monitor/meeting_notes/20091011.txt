@@ -1,0 +1,44 @@
+Jacor, Joe, Jim, Andrew, Jon, John, Mike, Steve, Ryan
+
+
+Next meeting: Monday 5:30
+
+Reorganize Groups!
+
+-SRS team is dead/disbanded!
+
+Reorganize Spike Solutions: 
+Steve, Mike, Jon
+
+Processing Data, Recognizing Steps:
+Ryan, Jim
+
+MOVEMENT:
+Andrew, Jacor
+
+Jim will scan and send around Object Domain Analysis progress.
+
+Meeting monday night to finish this off.
+
+This meeting to hash out what the design is not who is writing what up.
+
+HLD - Stuff to work on?
+
+	What are the class objects? (John in Visio)
+		
+		Which requirements are fufilled by each class?
+		
+
+
+	What are the Database Objects? (Entity-Relationship Diagram)
+
+
+		Which requirement specifies that this object must exist in the ERD?
+		What about the linkages where do they come from?
+
+	
+	How do the class objects interact? (Interfaces)
+
+		How are the PDA and Server going to interact? (Messages)
+			Not a specific format, but the general information.
+		

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Laptop_GUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Laptop_GUI_localhost_PDAConnection" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4757/Service.asmx</Value>
+    </Setting>
+    <Setting Name="Laptop_GUI_localhost1_PDAConnection" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4757/Service.asmx</Value>
+    </Setting>
+    <Setting Name="Laptop_GUI_Server_Connection_ActivityMonitor" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:2345/ActivityMonitor.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

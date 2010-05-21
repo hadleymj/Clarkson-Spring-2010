@@ -1,0 +1,25 @@
+Initial Grid:
+
+31	81	91	94	5	31	
+98	33	84	40	81	64	
+20	87	7	88	72	19	
+47	68	49	5	4	89	
+90	56	15	70	46	48	
+57	29	81	48	75	86	
+
+Initial Sum:  1989
+Executing threads...
+
+Final Grid:
+
+84	5	81	31	48	19	
+46	48	57	5	91	64	
+7	72	70	90	4	31	
+87	33	89	98	75	40	
+29	47	49	56	94	15	
+86	81	88	68	81	20	
+
+
+Final Sum:  1989
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  200

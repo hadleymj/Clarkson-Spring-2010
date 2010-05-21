@@ -1,0 +1,52 @@
+Monitor MonkeysGuerillas{
+
+cond Monkeys;
+cond Guerilla;
+
+int crossing_monkeys = 0;
+bool guerilla_crossing = false;
+int waiting_monkeys = 0;
+int waiting_guerillas = 0;
+
+Enter_CS_Monkey(){
+while((crossing_monkeys == 12) || guerilla_crossing || guerilla_waiting > 0)
+{
+	waiting_monkeys++;
+	Monkeys.wait();
+	waiting_monkeys--;
+}
+
+crossing_monkeys++;
+}
+
+Exit_CS_Monkey(){
+crossing_monkeys--;
+
+if(crossing_monkeys == 0 && guerilla_waiting > 0)
+	guerilla.signal();
+else if(waiting_mokneys > 0 && guerilla_waiting == 0)
+	monkey.signal();
+}
+
+Enter_CS_Guerilla(){
+while(crossing_monkeys > 0 || guerilla_crossing || waiting_monkeys > 0)
+{
+	waiting_guerilla++;
+	guerilla.wait();
+	waiting_guerilla--;
+}
+guerilla_crossing = true;
+}
+
+Exit_CS_Guerilla(){
+guerilla_crossing = false;
+
+if(waiting_monkeys > 0)
+{
+	monkeys.signal();
+}
+else if(waiting_guerilla > 0)
+{
+	guerilla.signal();
+}
+}

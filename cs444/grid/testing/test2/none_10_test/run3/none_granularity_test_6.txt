@@ -1,0 +1,25 @@
+Initial Grid:
+
+64	77	22	64	22	14	
+80	55	58	75	0	97	
+46	93	72	18	87	67	
+38	78	54	45	66	4	
+43	42	75	63	34	70	
+3	99	47	77	15	69	
+
+Initial Sum:  1933
+Executing threads...
+
+Final Grid:
+
+45	87	42	54	77	46	
+34	55	77	75	22	99	
+0	66	58	22	3	75	
+69	70	14	97	78	64	
+43	47	4	15	67	63	
+64	72	38	93	80	18	
+
+
+Final Sum:  1933
+DATA INTEGRITY MAINTAINED!!!!!
+Secs elapsed:  20

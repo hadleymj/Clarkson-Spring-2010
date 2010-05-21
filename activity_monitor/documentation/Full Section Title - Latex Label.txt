@@ -1,0 +1,40 @@
+Feature Name						Label					Reference Numbers on 20091012 meeting notes.
+
+Definitions						defs				
+Application Start and Statistics Display		sec: App Start				3.1.1
+Data Dump						sec: Data Dump				3.1.2
+Emergency Data Dump					sec: Emer Data Dump			3.1.3
+Patient Profile						sec: Patient Profile			3.1.4
+Web UI							sec: Web UI				3.1.5
+Unique Usernames for Clinicians and Patients		sec: Unique Usernames			3.1.6
+PDA to Wii Remote Connection				sec: PDA Wii Conn			3.1.7
+PDA to Server Connection				sec: PDA Server Conn			3.1.8
+Connection mode: paired, discoverable			sec: Conn Mode				3.1.9
+PDA records data from Wii Remote			sec: PDA Records Data			3.1.10	
+Alerts on PDA Including Text and Audio			sec: Alerts				3.1.11
+Detection of Lost Connection by PDA			sec: Wii Conn Lost			3.1.12
+List of Available Patients				sec: List Patients			3.2.1
+Modify Patient Daily Tasks				sec: Mod Daily Task			3.2.2
+PDA Updates the Patient's Task				sec: PDA Update Task			3.2.3
+Battery Status						sec: Battery Status			3.2.4
+Alert When the Daily Task is Completed			sec: Task Completed			3.2.5
+Researcher Login on Web UI				sec: Researcher Login			3.2.6
+Vibrating on Wii Remote					sec: Wii Vibrate			3.2.7
+Viewing Tasks for Day					sec: View Task				3.2.8
+Daily Tasks Displayed in a Large, Easy to Read Font	sec: Large Font				3.2.9
+PDA Displays PDA Statistics in Real Time		sec: PDA Displays Stats			3.2.10
+Patient Health Chart					sec: Health Chart			3.3.1
+Group Patient Charts					sec: Group Chart			3.3.2
+Patient Completion Charts				sec: Completion Chart			3.3.3
+Patients Remain Anonymous				sec: Anonymous				3.3.4
+
+
+NEW Features since 20091012 meeting notes:
+
+Clinician GUI for Initial Patient Login on the PDA	sec: Clinician GUI
+Clinician Homepage on Web UI				sec: Clinician Homepage
+Researcher Homepage on Web UI				sec: Researcher Homepage
+Administrator Homepage 					sec: Administrator Homepage
+Administrator can Add/Remove/Edit Researcher and Clinician Web UI Accounts	sec: Administrator Add/Remote/Edit
+
+Object Oriented Domain Analysis				fig: prelim ooda
